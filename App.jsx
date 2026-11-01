@@ -1088,7 +1088,7 @@ const INITIAL_MOMENTS = [
   }
 ];
 
-// Calculate Proper Barclays Nostalgic Index (80% minimum up to 100%) based on YouTube clip views relative to all clips in the vault
+// Calculate Proper Barclays Nostalgia Index (60% minimum up to 100%) based on YouTube clip views relative to all clips in the vault
 const LOG_VIEWS = INITIAL_MOMENTS.map((m) => Math.log10(Math.max(m.viewCount, 1)));
 const MIN_LOG_VIEWS = Math.min(...LOG_VIEWS);
 const MAX_LOG_VIEWS = Math.max(...LOG_VIEWS);
@@ -1099,7 +1099,7 @@ const MOMENTS_WITH_INDEX = INITIAL_MOMENTS.map((m) => {
     MAX_LOG_VIEWS > MIN_LOG_VIEWS
       ? (logVal - MIN_LOG_VIEWS) / (MAX_LOG_VIEWS - MIN_LOG_VIEWS)
       : 1;
-  const nostalgicIndex = Math.max(80, Math.min(100, Math.round(80 + normalized * 20)));
+  const nostalgicIndex = Math.max(60, Math.min(100, Math.round(60 + normalized * 40)));
   return {
     ...m,
     barclaysRating: nostalgicIndex
@@ -1146,10 +1146,19 @@ export default function App() {
     setActiveMoment(randomPick);
   };
 
+  // Dynamic font size helper so the player name never gets cut off or truncated
+  const getPlayerBadgeFontSize = (name) => {
+    const len = name.length;
+    if (len > 22) return 'text-[clamp(6.5px,1.75vw,10px)]';
+    if (len > 17) return 'text-[clamp(7px,1.95vw,10.5px)]';
+    if (len > 13) return 'text-[clamp(7.5px,2.15vw,11px)]';
+    return 'text-[clamp(8.5px,2.35vw,11px)]';
+  };
+
   return (
-    <div className="min-h-screen bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 p-3 sm:p-4 text-xs sm:text-sm">
+    <div className="min-h-screen bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 px-3 sm:px-4 py-6 flex flex-col justify-center text-xs sm:text-sm">
       {/* ONE UNIFIED MASTER CARD */}
-      <div className="max-w-5xl mx-auto bg-gradient-to-b from-[#0C1933] to-[#081124] border border-cyan-500/30 rounded-2xl shadow-2xl relative overflow-hidden divide-y divide-slate-800/80">
+      <div className="w-full max-w-5xl mx-auto bg-gradient-to-b from-[#0C1933] to-[#081124] border border-cyan-500/30 rounded-2xl shadow-2xl relative overflow-hidden divide-y divide-slate-800/80">
         {/* Subtle Stadium Floodlight Glow */}
         <div className="pointer-events-none absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
@@ -1340,18 +1349,21 @@ export default function App() {
         <div className="p-4 sm:p-5 space-y-4 relative z-10 bg-[#070F20]/70">
           {/* Scoreboard & Era Bar */}
           <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2.5 space-y-2">
-            {/* Top Row: Player, Season, Date & Category dynamically scaled on 1 line */}
-            <div className="flex items-center justify-between gap-1 sm:gap-2 flex-nowrap overflow-hidden">
-              <div className="flex items-center gap-1 sm:gap-2 min-w-0 flex-nowrap">
-                <span className="bg-red-600 text-white text-[clamp(8px,2.3vw,11px)] font-black px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-wider truncate shrink">
-                  {activeMoment.player}
-                </span>
-                <span className="text-[clamp(8px,2.2vw,11px)] font-bold text-cyan-300 uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
-                  {activeMoment.season} • {activeMoment.date}
-                </span>
-              </div>
+            {/* Top Row: Player, Season/Date & Category with equal spacing between all three and dynamic sizing */}
+            <div className="flex items-center justify-between gap-1.5 sm:gap-3 flex-nowrap w-full">
+              <span
+                className={`bg-red-600 text-white ${getPlayerBadgeFontSize(
+                  activeMoment.player
+                )} font-black px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0`}
+              >
+                {activeMoment.player}
+              </span>
 
-              <span className="inline-flex items-center gap-1 bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 text-[clamp(8px,2.1vw,10px)] font-extrabold px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
+              <span className="text-[clamp(7.5px,2.1vw,11px)] font-bold text-cyan-300 uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0 text-center">
+                {activeMoment.season} • {activeMoment.date}
+              </span>
+
+              <span className="inline-flex items-center gap-1 bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 text-[clamp(7.5px,2vw,10px)] font-extrabold px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
                 <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
                 <span>{activeMoment.category}</span>
               </span>
@@ -1373,7 +1385,7 @@ export default function App() {
             </div>
           </div>
 
-          {/* Title, Description, Transcript & Launch Button */}
+          {/* Title, Description, Transcript & Heritage Artifacts */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
             <div className="lg:col-span-7 flex flex-col">
               <h1 className="text-base sm:text-lg font-black text-white tracking-tight leading-snug">
@@ -1384,22 +1396,8 @@ export default function App() {
                 {activeMoment.description}
               </p>
 
-              {/* Direct YouTube Launch Button Centered */}
-              <div className="mt-3.5 mb-4 flex justify-center">
-                <a
-                  href={`https://www.youtube.com/watch?v=${activeMoment.youtubeId}${activeMoment.startTime > 0 ? `&t=${activeMoment.startTime}s` : ''}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:scale-[1.02] transition"
-                >
-                  <Play className="w-3.5 h-3.5 fill-current" />
-                  <span>Launch video clip</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              </div>
-
               {/* Original Broadcast Transcript */}
-              <div className="bg-slate-950/90 border border-amber-400/50 rounded-xl px-3.5 py-2.5 shadow-inner text-center">
+              <div className="mt-4 bg-slate-950/90 border border-amber-400/50 rounded-xl px-3.5 py-2.5 shadow-inner text-center">
                 <div className="flex items-center justify-center gap-1.5 text-[10px] text-amber-300 font-bold uppercase mb-1">
                   <Radio className="w-3 h-3 text-red-500 animate-ping" />
                   <span>ORIGINAL BROADCAST AUDIO TRANSCRIPT</span>
@@ -1410,7 +1408,7 @@ export default function App() {
               </div>
             </div>
 
-            {/* Heritage Artifacts Grid + Proper Barclays Nostalgic Index Bar */}
+            {/* Heritage Artifacts Grid + Proper Barclays Nostalgia Index Bar + Launch Video Button */}
             <div className="lg:col-span-5 space-y-2.5">
               <div className="grid grid-cols-2 gap-2">
                 <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
@@ -1454,11 +1452,11 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Proper Barclays Nostalgic Index Bar */}
+              {/* Proper Barclays Nostalgia Index Bar */}
               <div className="bg-slate-950/90 border border-cyan-500/30 rounded-xl p-3">
                 <div className="flex items-center justify-between text-[11px] font-black uppercase mb-1">
                   <span className="text-cyan-300 tracking-wider">
-                    Proper Barclays Nostalgic Index
+                    Proper Barclays Nostalgia Index
                   </span>
                   <span className="text-amber-400">
                     {activeMoment.barclaysRating}%
@@ -1472,15 +1470,27 @@ export default function App() {
                 </div>
                 <div className="flex items-center justify-between text-[10px] text-slate-400 font-semibold mt-1">
                   <span>Vault Clip Views: {activeMoment.viewCount.toLocaleString()}</span>
-                  <span>0 to 100% Heritage Scale</span>
+                  <span>0–100% Nostalgia Scale</span>
                 </div>
+              </div>
+
+              {/* Direct YouTube Launch Button Centered Underneath the Nostalgia Index */}
+              <div className="pt-1 flex justify-center">
+                <a
+                  href={`https://www.youtube.com/watch?v=${activeMoment.youtubeId}${activeMoment.startTime > 0 ? `&t=${activeMoment.startTime}s` : ''}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:scale-[1.02] transition"
+                >
+                  <Play className="w-3.5 h-3.5 fill-current" />
+                  <span>Launch video clip</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {/* Empty space at the bottom for comfortable scrolling */}
-      <div className="pb-24" />
     </div>
   );
 }
