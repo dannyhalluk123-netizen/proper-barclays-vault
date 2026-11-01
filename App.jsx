@@ -1155,9 +1155,9 @@ export default function App() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
 
         {/* 1. CARD HEADER & ROULETTE + SEARCH BUTTONS */}
-        <div className="p-3.5 sm:p-5 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-wrap items-center justify-between gap-3 relative z-10">
-          <div className="flex items-center space-x-2.5">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-400 via-blue-600 to-indigo-900 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center">
+        <div className="p-3.5 sm:p-5 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-3 relative z-10">
+          <div className="flex items-center space-x-2.5 w-full sm:w-auto justify-center sm:justify-start">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-400 via-blue-600 to-indigo-900 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center shrink-0">
               <div className="w-full h-full bg-[#061022] rounded-[6px] flex items-center justify-center">
                 <Trophy className="w-5 h-5 text-amber-400" />
               </div>
@@ -1177,10 +1177,10 @@ export default function App() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 w-full sm:w-auto">
+          <div className="w-full max-w-[360px] sm:max-w-none sm:w-auto mx-auto sm:mx-0 px-3 sm:px-0 flex items-center justify-center gap-2.5">
             <button
               onClick={() => setShowSearchVault((prev) => !prev)}
-              className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 font-bold px-3.5 py-2.5 sm:py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
+              className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 font-bold px-3.5 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
                 showSearchVault
                   ? 'bg-cyan-400 text-slate-950 border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.45)]'
                   : 'bg-slate-900/90 hover:bg-slate-800 text-cyan-300 border-cyan-500/40'
@@ -1192,7 +1192,7 @@ export default function App() {
 
             <button
               onClick={handleRandomRoulette}
-              className="flex-[1.6] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-4 py-2.5 sm:py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(251,191,36,0.45)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
+              className="flex-[1.35] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-3.5 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(251,191,36,0.45)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
             >
               <Shuffle className="w-3.5 h-3.5 stroke-[2.5] shrink-0 group-hover:rotate-180 transition-transform duration-300" />
               <span>Random Barclays Roulette</span>
@@ -1472,7 +1472,7 @@ export default function App() {
                 </div>
                 <div className="flex items-center justify-between text-[10px] text-slate-400 font-semibold mt-1">
                   <span>Vault Clip Views: {activeMoment.viewCount.toLocaleString()}</span>
-                  <span>0–100% Heritage Scale</span>
+                  <span>0 to 100% Heritage Scale</span>
                 </div>
               </div>
             </div>
