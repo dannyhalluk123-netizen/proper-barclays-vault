@@ -19,9 +19,9 @@ import {
 
 const ERA_FILTERS = [
   'All Eras (1990 to 2020)',
-  '90s Chaos (1990-1999)',
-  'Golden Barclays (2000-2009)',
-  'Late Barclays (2010-2020)'
+  '90s Chaos (1990 to 1999)',
+  'Golden Barclays (2000 to 2009)',
+  'Late Barclays (2010 to 2020)'
 ];
 
 const CATEGORY_TAGS = [
@@ -30,8 +30,8 @@ const CATEGORY_TAGS = [
   'Cult Hero',
   'Proper Volley',
   'Proper Tackle',
-  'Solo Mazy',
-  'Proper Barclays Chaos',
+  'Solo Golazo',
+  'Touchline Chaos',
   'Set Piece Wizardry',
   'Iconic Celebration'
 ];
@@ -39,16 +39,16 @@ const CATEGORY_TAGS = [
 const INITIAL_MOMENTS = [
   {
     id: 1,
-    title: "Papiss Cissé's Physics-Defying Banana Volley",
+    title: "Papiss Cissé's Physics Defying Banana Volley",
     player: "Papiss Cissé",
     homeTeam: "Chelsea",
     awayTeam: "Newcastle",
-    score: "0 - 2",
+    score: "0 to 2",
     season: "2011/12",
     date: "2 May 2012",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Thunderbastard",
-    ball: "Nike Seitiro Hi-Vis",
+    ball: "Nike Seitiro Hi Vis",
     sponsor: "Virgin Money",
     stadium: "Stamford Bridge",
     referee: "Mark Halsey",
@@ -56,18 +56,18 @@ const INITIAL_MOMENTS = [
     youtubeId: "I1MpJJ4tfLY",
     startTime: 0,
     commentary: "\"Cissé... OH! UNBELIEVABLE! What a goal from Papiss Cissé! That is sensational!\"",
-    description: "Shola Ameobi chests down a throw-in on the left touchline and Cissé casually lashes an outside-of-the-boot swerving rocket from 37 yards over Petr Čech."
+    description: "Shola Ameobi chests down a throw in on the left touchline and Cissé casually lashes an outside of the boot swerving rocket from 37 yards over Petr Čech."
   },
   {
     id: 2,
-    title: "Tony Yeboah's Crossbar-Shaking Volley vs Liverpool",
+    title: "Tony Yeboah's Crossbar Shaking Volley vs Liverpool",
     player: "Tony Yeboah",
     homeTeam: "Leeds Utd",
     awayTeam: "Liverpool",
-    score: "1 - 0",
+    score: "1 to 0",
     season: "1995/96",
     date: "21 Aug 1995",
-    era: "90s Chaos (1990-1999)",
+    era: "90s Chaos (1990 to 1999)",
     category: "Proper Volley",
     ball: "Mitre Ultimax",
     sponsor: "Thistle Hotels",
@@ -77,7 +77,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "gq4-z7mI_Cw",
     startTime: 0,
     commentary: "\"Rod Wallace... knocked down... YEBOAH! OH, WHAT A GOAL! Absolute thunderbolt!\"",
-    description: "Rod Wallace heads the ball back into space and Tony Yeboah unleashes a first-time volley that crashes off the underside of the crossbar and nearly breaks the net."
+    description: "Rod Wallace heads the ball back into space and Tony Yeboah unleashes a first time volley that crashes off the underside of the crossbar and nearly breaks the net."
   },
   {
     id: 3,
@@ -85,10 +85,10 @@ const INITIAL_MOMENTS = [
     player: "Tony Yeboah",
     homeTeam: "Wimbledon",
     awayTeam: "Leeds Utd",
-    score: "2 - 4",
+    score: "2 to 4",
     season: "1995/96",
     date: "23 Sep 1995",
-    era: "90s Chaos (1990-1999)",
+    era: "90s Chaos (1990 to 1999)",
     category: "Thunderbastard",
     ball: "Mitre Ultimax",
     sponsor: "Thistle Hotels",
@@ -98,7 +98,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "RRHSP_KXigs",
     startTime: 0,
     commentary: "\"Yeboah controls it on his chest, dummies one... BOOOM! In off the bar AGAIN!\"",
-    description: "Chest control, knee juggle, dummy past a sliding defender, and an unstoppable half-volley violently slamming off the crossbar."
+    description: "Chest control, knee juggle, dummy past a sliding defender, and an unstoppable half volley violently slamming off the crossbar."
   },
   {
     id: 4,
@@ -106,10 +106,10 @@ const INITIAL_MOMENTS = [
     player: "Paolo Di Canio",
     homeTeam: "West Ham",
     awayTeam: "Wimbledon",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "1999/00",
     date: "26 Mar 2000",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Proper Volley",
     ball: "Mitre Ultimax",
     sponsor: "Dr. Martens",
@@ -119,7 +119,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "bwL-QDZg2BY",
     startTime: 0,
     commentary: "\"Trevor Sinclair with the diagonal ball... DI CANIO! Goal of the season!\"",
-    description: "With both feet off the turf, Paolo Di Canio meets Trevor Sinclair's 50-yard cross on the full volley with the outside of his right boot from a tight angle."
+    description: "With both feet off the turf, Paolo Di Canio meets Trevor Sinclair's 50 yard cross on the full volley with the outside of his right boot from a tight angle."
   },
   {
     id: 5,
@@ -127,11 +127,11 @@ const INITIAL_MOMENTS = [
     player: "Dennis Bergkamp",
     homeTeam: "Newcastle",
     awayTeam: "Arsenal",
-    score: "0 - 2",
+    score: "0 to 2",
     season: "2001/02",
     date: "2 Mar 2002",
-    era: "Golden Barclays (2000-2009)",
-    category: "Solo Mazy",
+    era: "Golden Barclays (2000 to 2009)",
+    category: "Solo Golazo",
     ball: "Nike Geo Merlin",
     sponsor: "Sega / Dreamcast",
     stadium: "St James' Park",
@@ -144,14 +144,14 @@ const INITIAL_MOMENTS = [
   },
   {
     id: 6,
-    title: "Eric Cantona's Chip & Collar-Popped 360 Stare",
+    title: "Eric Cantona's Chip & Collar Popped 360 Stare",
     player: "Eric Cantona",
     homeTeam: "Man Utd",
     awayTeam: "Sunderland",
-    score: "5 - 0",
+    score: "5 to 0",
     season: "1996/97",
     date: "21 Dec 1996",
-    era: "90s Chaos (1990-1999)",
+    era: "90s Chaos (1990 to 1999)",
     category: "Iconic Celebration",
     ball: "Mitre Ultimax",
     sponsor: "Sharp",
@@ -160,19 +160,19 @@ const INITIAL_MOMENTS = [
     viewCount: 399639,
     youtubeId: "JpyJtjLoDKg",
     startTime: 0,
-    commentary: "\"Cantona drives forward, one-two with McClair... oh, look at that chip! Majestic!\"",
-    description: "Cantona dances through two tackles, plays a one-two with Brian McClair, chips Lionel Perez into the top corner, and slowly turns in a circle soaking in Old Trafford."
+    commentary: "\"Cantona drives forward, one two with McClair... oh, look at that chip! Majestic!\"",
+    description: "Cantona dances through two tackles, plays a give and go with Brian McClair, chips Lionel Perez into the top corner, and slowly turns in a circle soaking in Old Trafford."
   },
   {
     id: 7,
-    title: "Wayne Rooney's Rage Volley Mid-Argument",
+    title: "Wayne Rooney's Rage Volley Mid Argument",
     player: "Wayne Rooney",
     homeTeam: "Man Utd",
     awayTeam: "Newcastle",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "2004/05",
     date: "24 Apr 2005",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Proper Volley",
     ball: "Nike Total 90 Aerow",
     sponsor: "Vodafone",
@@ -190,10 +190,10 @@ const INITIAL_MOMENTS = [
     player: "Matt Le Tissier",
     homeTeam: "Southampton",
     awayTeam: "Newcastle",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "1993/94",
     date: "24 Oct 1993",
-    era: "90s Chaos (1990-1999)",
+    era: "90s Chaos (1990 to 1999)",
     category: "Cult Hero",
     ball: "Mitre Pro Max",
     sponsor: "Dimplex",
@@ -203,20 +203,20 @@ const INITIAL_MOMENTS = [
     youtubeId: "qkMVDt5c778",
     startTime: 0,
     commentary: "\"Backheeled into Le Tissier... flicks it over one, over another, and rolls it home! Pure genius!\"",
-    description: "Le God collects a backheel with his heel, flicks the ball over two Newcastle defenders in succession without it touching the grass, and slots it into the corner."
+    description: "Le God collects a pass with his heel, flicks the ball over two Newcastle defenders in succession without it touching the grass, and slots it into the corner."
   },
   {
     id: 9,
-    title: "Paul Scholes' 30-Yard Corner Volley off the Bar",
+    title: "Paul Scholes' 30 Yard Corner Volley off the Bar",
     player: "Paul Scholes",
     homeTeam: "Aston Villa",
     awayTeam: "Man Utd",
-    score: "0 - 3",
+    score: "0 to 3",
     season: "2006/07",
     date: "23 Dec 2006",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Proper Volley",
-    ball: "Nike Total 90 Aerow II Hi-Vis",
+    ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "AIG",
     stadium: "Villa Park",
     referee: "Steve Bennett",
@@ -224,7 +224,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "qwRX1urYQJI",
     startTime: 0,
     commentary: "\"Headed clear to the edge of the box... SCHOLES! Unbelievable technique!\"",
-    description: "Giggs' corner is headed high into the air out to 28 yards, and Paul Scholes meets the dropping snow-covered ball with a dipping volley off the underside of the bar."
+    description: "Giggs' corner is headed high into the air out to 28 yards, and Paul Scholes meets the dropping snow covered ball with a dipping volley off the underside of the bar."
   },
   {
     id: 10,
@@ -232,10 +232,10 @@ const INITIAL_MOMENTS = [
     player: "Thierry Henry",
     homeTeam: "Arsenal",
     awayTeam: "Man Utd",
-    score: "1 - 0",
+    score: "1 to 0",
     season: "2000/01",
     date: "1 Oct 2000",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Proper Volley",
     ball: "Nike Geo Merlin",
     sponsor: "Dreamcast",
@@ -253,10 +253,10 @@ const INITIAL_MOMENTS = [
     player: "David Beckham",
     homeTeam: "Wimbledon",
     awayTeam: "Man Utd",
-    score: "0 - 3",
+    score: "0 to 3",
     season: "1996/97",
     date: "17 Aug 1996",
-    era: "90s Chaos (1990-1999)",
+    era: "90s Chaos (1990 to 1999)",
     category: "Thunderbastard",
     ball: "Mitre Ultimax",
     sponsor: "Sharp",
@@ -266,7 +266,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "u4tVnpwp8d4",
     startTime: 0,
     commentary: "\"Beckham from the halfway line... IT'S IN! Neil Sullivan is stranded!\"",
-    description: "On the opening day of the 1996/97 season, a 21-year-old David Beckham spots Neil Sullivan off his line and floats a 57-yard strike straight into the net."
+    description: "On the opening day of the 1996/97 season, a 21 year old David Beckham spots Neil Sullivan off his line and floats a 57 yard strike straight into the net."
   },
   {
     id: 12,
@@ -274,10 +274,10 @@ const INITIAL_MOMENTS = [
     player: "Steven Gerrard",
     homeTeam: "Liverpool",
     awayTeam: "Middlesbrough",
-    score: "1 - 1",
+    score: "1 to 1",
     season: "2004/05",
     date: "30 Apr 2005",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Thunderbastard",
     ball: "Nike Total 90 Aerow",
     sponsor: "Carlsberg",
@@ -287,19 +287,19 @@ const INITIAL_MOMENTS = [
     youtubeId: "FJzVe_2hRcc",
     startTime: 0,
     commentary: "\"Riise chests it down... GERRARD! Oh my goodness, what a hit from 35 yards!\"",
-    description: "Stevie G takes a bouncing pass on the half-volley from 35 yards and hits a rising, swerving missile into Mark Schwarzer's top corner."
+    description: "Stevie G takes a bouncing pass on the half volley from 35 yards and hits a rising, swerving missile into Mark Schwarzer's top corner."
   },
   {
     id: 13,
-    title: "Hatem Ben Arfa's 70-Yard Solo Slalom vs Bolton",
+    title: "Hatem Ben Arfa's 70 Yard Solo Slalom vs Bolton",
     player: "Hatem Ben Arfa",
     homeTeam: "Newcastle",
     awayTeam: "Bolton",
-    score: "2 - 0",
+    score: "2 to 0",
     season: "2011/12",
     date: "9 Apr 2012",
-    era: "Late Barclays (2010-2020)",
-    category: "Solo Mazy",
+    era: "Late Barclays (2010 to 2020)",
+    category: "Solo Golazo",
     ball: "Nike Seitiro",
     sponsor: "Virgin Money",
     stadium: "St James' Park",
@@ -308,20 +308,20 @@ const INITIAL_MOMENTS = [
     youtubeId: "WpuFePHvLUM",
     startTime: 0,
     commentary: "\"Ben Arfa turns inside his own half... still going... past four! Brilliant solo goal!\"",
-    description: "The ultimate streets-won't-forget Barclaysman spins in the centre circle and glides past four Bolton players in a straight line before slotting past Ádám Bogdán."
+    description: "The ultimate streets won't forget Barclaysman spins in the centre circle and glides past four Bolton players in a straight line before slotting past Ádám Bogdán."
   },
   {
     id: 14,
-    title: "Adel Taarabt's Nutmeg & Outside-Boot Magic",
+    title: "Adel Taarabt's Nutmeg & Outside Boot Magic",
     player: "Adel Taarabt",
     homeTeam: "QPR",
     awayTeam: "Fulham",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "2012/13",
     date: "15 Dec 2012",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Cult Hero",
-    ball: "Nike Maxim Hi-Vis",
+    ball: "Nike Maxim Hi Vis",
     sponsor: "AirAsia",
     stadium: "Loftus Road",
     referee: "Martin Atkinson",
@@ -329,18 +329,18 @@ const INITIAL_MOMENTS = [
     youtubeId: "4Hz_4LRxtvM",
     startTime: 0,
     commentary: "\"Taarabt with his gloves on and socks rolled down... exquisite finish with the outside of the boot!\"",
-    description: "Wearing black woollen gloves with low socks, Taarabt toys with Brede Hangeland before curling an outside-of-the-foot beauty into the corner."
+    description: "Wearing black woollen gloves with low socks, Taarabt toys with Brede Hangeland before curling an outside of the foot beauty into the corner."
   },
   {
     id: 15,
-    title: "Jay-Jay Okocha's Rainbow Flick on Ray Parlour",
-    player: "Jay-Jay Okocha",
+    title: "Jay Jay Okocha's Rainbow Flick on Ray Parlour",
+    player: "Jay Jay Okocha",
     homeTeam: "Bolton",
     awayTeam: "Arsenal",
-    score: "2 - 2",
+    score: "2 to 2",
     season: "2002/03",
     date: "26 Apr 2003",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Cult Hero",
     ball: "Nike Geo Merlin II",
     sponsor: "Reebok",
@@ -350,18 +350,18 @@ const INITIAL_MOMENTS = [
     youtubeId: "NQVV3hA0MGQ",
     startTime: 0,
     commentary: "\"Okocha trapped by the corner flag... OH LOOK AT THAT! Over Ray Parlour's head!\"",
-    description: "So good they named him twice: Jay-Jay Okocha casually rainbows the ball clean over a bewildered Ray Parlour while protecting Bolton's survival."
+    description: "So good they named him twice: Jay Jay Okocha casually rainbows the ball clean over a bewildered Ray Parlour while protecting Bolton's survival."
   },
   {
     id: 16,
-    title: "Jay-Jay Okocha's Relegation-Saving Rocket vs West Ham",
-    player: "Jay-Jay Okocha",
+    title: "Jay Jay Okocha's Relegation Saving Rocket vs West Ham",
+    player: "Jay Jay Okocha",
     homeTeam: "Bolton",
     awayTeam: "West Ham",
-    score: "1 - 0",
+    score: "1 to 0",
     season: "2002/03",
     date: "19 Apr 2003",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Thunderbastard",
     ball: "Nike Geo Merlin II",
     sponsor: "Reebok",
@@ -371,39 +371,39 @@ const INITIAL_MOMENTS = [
     youtubeId: "OX6XC8n7F2w",
     startTime: 0,
     commentary: "\"Okocha steps past one, unleashes... UNSTOPPABLE! David James didn't even move!\"",
-    description: "In a huge relegation six-pointer, Okocha dribbles from midfield and bends a vicious 28-yard strike off the inside of the stanchion."
+    description: "In a huge relegation battle, Okocha dribbles from midfield and bends a vicious 28 yard strike off the inside of the stanchion."
   },
   {
     id: 17,
-    title: "Rory Delap's Towel-Dried Javelin Throw Chaos",
+    title: "Rory Delap's Towel Dried Javelin Throw Chaos",
     player: "Rory Delap",
     homeTeam: "Stoke City",
     awayTeam: "Arsenal",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "2008/09",
     date: "1 Nov 2008",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Set Piece Wizardry",
-    ball: "Nike Total 90 Omni Hi-Vis",
+    ball: "Nike Total 90 Omni Hi Vis",
     sponsor: "Britannia",
     stadium: "Britannia Stadium",
     referee: "Rob Styles",
     viewCount: 214161,
     youtubeId: "RoF-S60E1aE",
     startTime: 0,
-    commentary: "\"Delap dries the ball with the towel inside his vest... flat 45-yard missile into the six-yard box!\"",
-    description: "Arsène Wenger complained that Delap's throws were unfair as Stoke turned every throw-in at a windy Britannia Stadium into a flat-trajectory corner kick."
+    commentary: "\"Delap dries the ball with the towel inside his vest... flat 45 yard missile into the six yard box!\"",
+    description: "Arsène Wenger complained that Delap's throws were unfair as Stoke turned every throw in at a windy Britannia Stadium into a flat trajectory corner kick."
   },
   {
     id: 18,
-    title: "Morten Gamst Pedersen's Left-Footed Volley at Ewood",
+    title: "Morten Gamst Pedersen's Left Footed Volley at Ewood",
     player: "Morten Gamst Pedersen",
     homeTeam: "Blackburn",
     awayTeam: "Fulham",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "2005/06",
     date: "20 Aug 2005",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Cult Hero",
     ball: "Nike Total 90 Aerow",
     sponsor: "Lonsdale",
@@ -413,7 +413,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "JlFYo0NwN8E",
     startTime: 0,
     commentary: "\"Crossed to the back post... GAMST PEDERSEN! What a sweet left foot that man has!\"",
-    description: "Norwegian Barclays royalty Morten Gamst Pedersen watches a deep cross drop over his shoulder and hammers a first-time volley into the roof of the net."
+    description: "Norwegian Barclays royalty Morten Gamst Pedersen watches a deep cross drop over his shoulder and hammers a first time volley into the roof of the net."
   },
   {
     id: 19,
@@ -421,10 +421,10 @@ const INITIAL_MOMENTS = [
     player: "Laurent Robert",
     homeTeam: "Newcastle",
     awayTeam: "Fulham",
-    score: "1 - 4",
+    score: "1 to 4",
     season: "2004/05",
     date: "7 Nov 2004",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Cult Hero",
     ball: "Nike Total 90 Aerow",
     sponsor: "Northern Rock",
@@ -433,7 +433,7 @@ const INITIAL_MOMENTS = [
     viewCount: 7623,
     youtubeId: "GxmOlqwsULc",
     startTime: 0,
-    commentary: "\"Laurent Robert leaps in the air... wait, he's backheeled it in mid-air into the top corner!\"",
+    commentary: "\"Laurent Robert leaps in the air... wait, he's backheeled it in mid air into the top corner!\"",
     description: "Laurent Robert jumps with his back to goal and flicks the ball with the outside of his heel at head height over Edwin van der Sar."
   },
   {
@@ -442,10 +442,10 @@ const INITIAL_MOMENTS = [
     player: "Laurent Robert",
     homeTeam: "Newcastle",
     awayTeam: "Tottenham",
-    score: "4 - 0",
+    score: "4 to 0",
     season: "2003/04",
     date: "13 Dec 2003",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Thunderbastard",
     ball: "Nike Geo Merlin",
     sponsor: "Northern Rock",
@@ -455,18 +455,18 @@ const INITIAL_MOMENTS = [
     youtubeId: "Mo1QNVX8ZNQ",
     startTime: 0,
     commentary: "\"Robert from 35 yards... Kasey Keller had no chance! Look at the swerve on that!\"",
-    description: "Two outrageous strikes in the same afternoon: a 30-yard half-volley into the top corner followed by a 35-yard knuckleball thunderbolt."
+    description: "Two outrageous strikes in the same afternoon: a 30 yard half volley into the top corner followed by a 35 yard knuckleball thunderbolt."
   },
   {
     id: 21,
-    title: "Michu's £2m Debut Brace & Ear-Cup Celebration",
+    title: "Michu's £2m Debut Brace & Ear Cup Celebration",
     player: "Michu",
     homeTeam: "QPR",
     awayTeam: "Swansea City",
-    score: "0 - 5",
+    score: "0 to 5",
     season: "2012/13",
     date: "18 Aug 2012",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Cult Hero",
     ball: "Nike Maxim",
     sponsor: "32Red",
@@ -476,20 +476,20 @@ const INITIAL_MOMENTS = [
     youtubeId: "4Qe4Q27TmOw",
     startTime: 0,
     commentary: "\"Michu curls it into the roof of the net! What a bargain at two million pounds!\"",
-    description: "Baggy white and gold Centenary shirt, floppy hair, and the iconic hand-twirl ear celebration as Michu announces the greatest one-season wonder run in history."
+    description: "Baggy white and gold Centenary shirt, floppy hair, and the iconic hand twirl ear celebration as Michu announces the greatest single season wonder run in history."
   },
   {
     id: 22,
-    title: "Ledley King's Superhuman Last-Ditch Tackle on Arjen Robben",
+    title: "Ledley King's Superhuman Recovery Tackle on Arjen Robben",
     player: "Ledley King",
     homeTeam: "Tottenham",
     awayTeam: "Chelsea",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "2006/07",
     date: "5 Nov 2006",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Proper Tackle",
-    ball: "Nike Total 90 Aerow II Hi-Vis",
+    ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "Mansion",
     stadium: "White Hart Lane",
     referee: "Graham Poll",
@@ -501,16 +501,16 @@ const INITIAL_MOMENTS = [
   },
   {
     id: 23,
-    title: "Michael Essien's Outrageous Outside-Foot Swerver",
+    title: "Michael Essien's Outrageous Outside Foot Swerver",
     player: "Michael Essien",
     homeTeam: "Chelsea",
     awayTeam: "Arsenal",
-    score: "1 - 1",
+    score: "1 to 1",
     season: "2006/07",
     date: "10 Dec 2006",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Thunderbastard",
-    ball: "Nike Total 90 Aerow II Hi-Vis",
+    ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "Samsung Mobile",
     stadium: "Stamford Bridge",
     referee: "Alan Wiley",
@@ -526,10 +526,10 @@ const INITIAL_MOMENTS = [
     player: "Robin van Persie",
     homeTeam: "Charlton",
     awayTeam: "Arsenal",
-    score: "1 - 2",
+    score: "1 to 2",
     season: "2006/07",
     date: "30 Sep 2006",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Proper Volley",
     ball: "Nike Total 90 Aerow II",
     sponsor: "Fly Emirates",
@@ -539,7 +539,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "F8Ehw1LvULk",
     startTime: 0,
     commentary: "\"Eboué crosses... VAN PERSIE! Airborne at the edge of the box!\"",
-    description: "Running at full sprint, Van Persie launches himself into the air and connects cleanly with his left shin/boot to rocket Eboué's cross into the roof of the net."
+    description: "Running at full sprint, Van Persie launches himself into the air and connects cleanly with his left boot to rocket Eboué's cross into the roof of the net."
   },
   {
     id: 25,
@@ -547,31 +547,31 @@ const INITIAL_MOMENTS = [
     player: "Cristiano Ronaldo",
     homeTeam: "Man Utd",
     awayTeam: "Portsmouth",
-    score: "2 - 0",
+    score: "2 to 0",
     season: "2007/08",
     date: "30 Jan 2008",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Set Piece Wizardry",
-    ball: "Nike Total 90 Aerow II Hi-Vis",
+    ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "AIG",
     stadium: "Old Trafford",
     referee: "Martin Atkinson",
     viewCount: 774360,
     youtubeId: "3hcfvObigQg",
     startTime: 0,
-    commentary: "\"Three steps back... RONALDO! The best free-kick you will ever see in the Premier League!\"",
-    description: "Power stance, deep exhale, zero spin: the ball clears the wall and nose-dives straight into the postage stamp corner as David James stands frozen."
+    commentary: "\"Three steps back... RONALDO! The best free kick you will ever see in the Premier League!\"",
+    description: "Power stance, deep exhale, zero spin: the ball clears the wall and dives straight into the postage stamp corner as David James stands frozen."
   },
   {
     id: 26,
-    title: "Wayne Rooney's 16-Year-Old Debut Screamer vs Arsenal",
+    title: "Wayne Rooney's 16 Year Old Debut Screamer vs Arsenal",
     player: "Wayne Rooney",
     homeTeam: "Everton",
     awayTeam: "Arsenal",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "2002/03",
     date: "19 Oct 2002",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Thunderbastard",
     ball: "Nike Geo Merlin II",
     sponsor: "Kejian",
@@ -581,19 +581,19 @@ const INITIAL_MOMENTS = [
     youtubeId: "7Nluk8PdQI8",
     startTime: 0,
     commentary: "\"A brilliant touch by Rooney... OH, A BRILLIANT GOAL! Remember the name: Wayne Rooney!\"",
-    description: "Five days before his 17th birthday, Rooney plucks a high ball out of the sky and curls a 28-yard dipping shot off the crossbar to end Arsenal's 30-game unbeaten run."
+    description: "Five days before his 17th birthday, Rooney plucks a high ball out of the sky and curls a 28 yard dipping shot off the crossbar to end Arsenal's 30 game unbeaten run."
   },
   {
     id: 27,
-    title: "Thierry Henry's 80-Yard North London Derby Solo Run",
+    title: "Thierry Henry's 80 Yard North London Derby Solo Run",
     player: "Thierry Henry",
     homeTeam: "Arsenal",
     awayTeam: "Tottenham",
-    score: "3 - 0",
+    score: "3 to 0",
     season: "2002/03",
     date: "16 Nov 2002",
-    era: "Golden Barclays (2000-2009)",
-    category: "Solo Mazy",
+    era: "Golden Barclays (2000 to 2009)",
+    category: "Solo Golazo",
     ball: "Nike Geo Merlin II",
     sponsor: "O2",
     stadium: "Highbury",
@@ -602,7 +602,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "yTTdH1ybU88",
     startTime: 0,
     commentary: "\"Henry from inside his own half... turns Carr inside out, slots it home and slides on his knees!\"",
-    description: "Henry picks up possession 25 yards inside his own half, glides past Matthew Etherington, twists Stephen Carr and Ledley King, and sprints the entire pitch to knee-slide in front of the Spurs end."
+    description: "Henry picks up possession 25 yards inside his own half, glides past Matthew Etherington, twists Stephen Carr and Ledley King, and sprints the entire pitch to slide on his knees."
   },
   {
     id: 28,
@@ -610,11 +610,11 @@ const INITIAL_MOMENTS = [
     player: "Thierry Henry",
     homeTeam: "Arsenal",
     awayTeam: "Liverpool",
-    score: "4 - 2",
+    score: "4 to 2",
     season: "2003/04",
     date: "9 Apr 2004",
-    era: "Golden Barclays (2000-2009)",
-    category: "Solo Mazy",
+    era: "Golden Barclays (2000 to 2009)",
+    category: "Solo Golazo",
     ball: "Nike Geo Merlin",
     sponsor: "O2",
     stadium: "Highbury",
@@ -631,11 +631,11 @@ const INITIAL_MOMENTS = [
     player: "Paolo Di Canio",
     homeTeam: "Sheff Wed",
     awayTeam: "Arsenal",
-    score: "1 - 0",
+    score: "1 to 0",
     season: "1998/99",
     date: "26 Sep 1998",
-    era: "90s Chaos (1990-1999)",
-    category: "Proper Barclays Chaos",
+    era: "90s Chaos (1990 to 1999)",
+    category: "Touchline Chaos",
     ball: "Mitre Ultimax",
     sponsor: "Sanderson",
     stadium: "Hillsborough",
@@ -644,60 +644,60 @@ const INITIAL_MOMENTS = [
     youtubeId: "J9CLiDqYfLc",
     startTime: 0,
     commentary: "\"Red card for Di Canio... AND HE'S PUSHED THE REFEREE OVER! Look at Paul Alcock stumble!\"",
-    description: "After clashing with Martin Keown, Di Canio shoves referee Paul Alcock in the chest, sending him comical-stumbling backwards for five yards."
+    description: "After clashing with Martin Keown, Di Canio shoves referee Paul Alcock in the chest, sending him stumbling backwards for five yards."
   },
   {
     id: 30,
-    title: "Roy Keane & Patrick Vieira Bone-Crunching Highbury Battles",
+    title: "Roy Keane & Patrick Vieira Bone Crunching Highbury Battles",
     player: "Roy Keane & Patrick Vieira",
     homeTeam: "Arsenal",
     awayTeam: "Man Utd",
-    score: "2 - 4",
+    score: "2 to 4",
     season: "2004/05",
     date: "1 Feb 2005",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Proper Tackle",
-    ball: "Nike Total 90 Aerow Hi-Vis",
+    ball: "Nike Total 90 Aerow Hi Vis",
     sponsor: "O2 / Vodafone",
     stadium: "Highbury",
     referee: "Graham Poll",
     viewCount: 2863272,
     youtubeId: "-ue1BFiKTtI",
     startTime: 0,
-    commentary: "\"I'll see you out there! Shut your mouth! And now flying into 50-50 reducers on the pitch!\"",
+    commentary: "\"I'll see you out there! Shut your mouth! And now flying into full blooded reducers on the pitch!\"",
     description: "From the Highbury tunnel war of words straight into thunderous midfield reducers, Keane and Vieira defined the ferocity of Golden Era Barclays."
   },
   {
     id: 31,
-    title: "Cheick Tioté's 4-4 Comeback Boom-Boom Volley",
+    title: "Cheick Tioté's 4 vs 4 Comeback Boom Boom Volley",
     player: "Cheick Tioté",
     homeTeam: "Newcastle",
     awayTeam: "Arsenal",
-    score: "4 - 4",
+    score: "4 to 4",
     season: "2010/11",
     date: "5 Feb 2011",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Proper Volley",
-    ball: "Nike Total 90 Tracer Hi-Vis",
+    ball: "Nike Total 90 Tracer Hi Vis",
     sponsor: "Northern Rock",
     stadium: "St James' Park",
     referee: "Phil Dowd",
     viewCount: 248045,
     youtubeId: "lpauxRuI_B0",
     startTime: 0,
-    commentary: "\"4-0 down at half time... TIOTÉ! BOOM BOOM CHEICK CHEICK THE ROOM! 4-4!\"",
-    description: "The late, great Cheick Tioté scores his only ever Premier League goal—a swerving 25-yard weak-foot volley—to complete a 4-0 down comeback in the 87th minute."
+    commentary: "\"Four nil down at half time... TIOTÉ! BOOM BOOM CHEICK CHEICK THE ROOM! Four all!\"",
+    description: "The late, great Cheick Tioté scores his only ever Premier League goal: a swerving 25 yard weak foot volley to complete a four goal comeback in the 87th minute."
   },
   {
     id: 32,
-    title: "Dimitri Payet's Gravity-Bending Free Kick vs Palace",
+    title: "Dimitri Payet's Gravity Bending Free Kick vs Palace",
     player: "Dimitri Payet",
     homeTeam: "West Ham",
     awayTeam: "Crystal Palace",
-    score: "2 - 2",
+    score: "2 to 2",
     season: "2015/16",
     date: "2 Apr 2016",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Set Piece Wizardry",
     ball: "Nike Ordem 3",
     sponsor: "Betway",
@@ -707,18 +707,18 @@ const INITIAL_MOMENTS = [
     youtubeId: "RbQxaWX5QfU",
     startTime: 0,
     commentary: "\"Payet whips it... HOW HAS THAT GONE IN?! It went 15 feet above the bar and dipped into the opposite corner!\"",
-    description: "In the farewell season at the Boleyn Ground, Payet hits a free-kick that rises high into the East London sky before dipping violently into the far top corner."
+    description: "In the farewell season at the Boleyn Ground, Payet hits a free kick that rises high into the East London sky before dipping violently into the far top corner."
   },
   {
     id: 33,
-    title: "Sol Campbell's Endless Sliding Tackle onumb-Run at Old Trafford",
+    title: "Sol Campbell's Endless Sliding Tackle at Old Trafford",
     player: "Sol Campbell",
     homeTeam: "Man Utd",
     awayTeam: "Arsenal",
-    score: "0 - 1",
+    score: "0 to 1",
     season: "2001/02",
     date: "8 May 2002",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Proper Tackle",
     ball: "Nike Geo Merlin",
     sponsor: "Sega / Dreamcast",
@@ -728,7 +728,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "gM1Z1F2e6B0",
     startTime: 0,
     commentary: "\"Sol Campbell comes across like a freight train! Took the ball, the man, and half the Old Trafford turf!\"",
-    description: "On the night Arsenal clinched the title at Old Trafford, Sol Campbell thundered into a bone-rattling touchline slide tackle that echoed around Manchester."
+    description: "On the night Arsenal clinched the title at Old Trafford, Sol Campbell thundered into a bone rattling touchline slide tackle that echoed around Manchester."
   },
   {
     id: 34,
@@ -736,12 +736,12 @@ const INITIAL_MOMENTS = [
     player: "Wayne Rooney",
     homeTeam: "Man Utd",
     awayTeam: "Man City",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "2010/11",
     date: "12 Feb 2011",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Proper Volley",
-    ball: "Nike Total 90 Tracer Hi-Vis",
+    ball: "Nike Total 90 Tracer Hi Vis",
     sponsor: "Aon",
     stadium: "Old Trafford",
     referee: "Andre Marriner",
@@ -749,18 +749,18 @@ const INITIAL_MOMENTS = [
     youtubeId: "v7E1WJVMhzA",
     startTime: 0,
     commentary: "\"Nani crosses... ROONEY! IT DEFIES DESCRIPTION! Bicycle kick into the top corner!\"",
-    description: "At 1-1 in the 78th minute of the Manchester derby, Rooney adjusts to a deflected Nani cross and executes an acrobatic overhead kick into Joe Hart's top corner."
+    description: "Level in the 78th minute of the Manchester derby, Rooney adjusts to a deflected Nani cross and executes an acrobatic overhead kick into Joe Hart's top corner."
   },
   {
     id: 35,
-    title: "Alan Shearer's Rocket Half-Volley vs Everton",
+    title: "Alan Shearer's Rocket Half Volley vs Everton",
     player: "Alan Shearer",
     homeTeam: "Newcastle",
     awayTeam: "Everton",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "2002/03",
     date: "1 Dec 2002",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Thunderbastard",
     ball: "Nike Geo Merlin II",
     sponsor: "NTL",
@@ -770,18 +770,18 @@ const INITIAL_MOMENTS = [
     youtubeId: "fgNObY2nqTY",
     startTime: 0,
     commentary: "\"Knocked down by Dyer... SHEARER! One hand in the air, the net is still rippling!\"",
-    description: "Shearer watches the ball bounce once 28 yards out and unleashes a laser-guided strike that stays four feet off the turf all the way into Richard Wright's net."
+    description: "Shearer watches the ball bounce once 28 yards out and unleashes a laser guided strike that stays four feet off the turf all the way into Richard Wright's net."
   },
   {
     id: 36,
-    title: "John Arne Riise's 'Release the Kraken' Free Kick",
+    title: "John Arne Riise's Release the Kraken Free Kick",
     player: "John Arne Riise",
     homeTeam: "Liverpool",
     awayTeam: "Man Utd",
-    score: "3 - 1",
+    score: "3 to 1",
     season: "2001/02",
     date: "4 Nov 2001",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Set Piece Wizardry",
     ball: "Nike Geo Merlin",
     sponsor: "Carlsberg",
@@ -791,41 +791,41 @@ const INITIAL_MOMENTS = [
     youtubeId: "LhdSdGfbBow",
     startTime: 0,
     commentary: "\"Hamann touches it... RIISE! OH MY GOODNESS! That almost tore the goalposts out!\"",
-    description: "Dietmar Hamann rolls the free-kick a yard and Riise unleashes a 70mph left-footed thunderbolt into the top corner before whipping his shirt off."
+    description: "Dietmar Hamann rolls the free kick a yard and Riise unleashes a 70mph left footed thunderbolt into the top corner before whipping his shirt off."
   },
   {
     id: 37,
-    title: "Tugay's Cigarette-Fueled Rocket Volley at Spurs",
+    title: "Tugay's Cigarette Fueled Rocket Volley at Spurs",
     player: "Tugay Kerimoğlu",
     homeTeam: "Tottenham",
     awayTeam: "Blackburn",
-    score: "1 - 1",
+    score: "1 to 1",
     season: "2006/07",
     date: "19 Nov 2006",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Cult Hero",
-    ball: "Nike Total 90 Aerow II Hi-Vis",
+    ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "bet24",
     stadium: "White Hart Lane",
     referee: "Mike Dean",
     viewCount: 209032,
     youtubeId: "_5oLISbbemA",
     startTime: 0,
-    commentary: "\"Cleared to the edge of the area... TUGAY! Every single goal he scores is a 30-yard screamer!\"",
-    description: "36-year-old Turkish maestro Tugay—famous for never scoring tap-ins—slices across a dropping ball on the edge of the box to arrow it past Paul Robinson."
+    commentary: "\"Cleared to the edge of the area... TUGAY! Every single goal he scores is a 30 yard screamer!\"",
+    description: "36 year old Turkish maestro Tugay, famous for never scoring tap ins, slices across a dropping ball on the edge of the box to arrow it past Paul Robinson."
   },
   {
     id: 38,
-    title: "Matthew Taylor's 45-Yard Dipping Volley at Fratton Park",
+    title: "Matthew Taylor's 45 Yard Dipping Volley at Fratton Park",
     player: "Matthew Taylor",
     homeTeam: "Portsmouth",
     awayTeam: "Everton",
-    score: "2 - 0",
+    score: "2 to 0",
     season: "2006/07",
     date: "9 Dec 2006",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Proper Volley",
-    ball: "Nike Total 90 Aerow II Hi-Vis",
+    ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "OKI",
     stadium: "Fratton Park",
     referee: "Mark Clattenburg",
@@ -833,20 +833,20 @@ const INITIAL_MOMENTS = [
     youtubeId: "k3wo8F_nMoc",
     startTime: 0,
     commentary: "\"Kanu lays it back... MATTHEW TAYLOR FROM 45 YARDS! Tim Howard is beaten from a mile out!\"",
-    description: "Wearing Pompey's iconic OKI kit, left-back Matty Taylor hits a bouncing ball from near the centre circle on the full volley over Tim Howard."
+    description: "Wearing Pompey's iconic OKI kit, left back Matty Taylor hits a bouncing ball from near the centre circle on the full volley over Tim Howard."
   },
   {
     id: 39,
-    title: "Nemanja Vidić Dives Head-First Into the Turf to Block",
+    title: "Nemanja Vidić Dives Head First Into the Turf to Block",
     player: "Nemanja Vidić",
     homeTeam: "Man Utd",
     awayTeam: "Swansea City",
-    score: "2 - 0",
+    score: "2 to 0",
     season: "2013/14",
     date: "11 Jan 2014",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Proper Tackle",
-    ball: "Nike Incyte Hi-Vis",
+    ball: "Nike Incyte Hi Vis",
     sponsor: "Aon",
     stadium: "Old Trafford",
     referee: "Chris Foy",
@@ -862,10 +862,10 @@ const INITIAL_MOMENTS = [
     player: "Danny Rose",
     homeTeam: "Tottenham",
     awayTeam: "Arsenal",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "2009/10",
     date: "14 Apr 2010",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Proper Volley",
     ball: "Nike Total 90 Ascente",
     sponsor: "Mansion",
@@ -875,7 +875,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "ibSqYaGTt8Y",
     startTime: 0,
     commentary: "\"Almunia punches it clear... DANNY ROSE ON HIS PREMIER LEAGUE DEBUT!\"",
-    description: "Making his first ever Premier League appearance in a North London Derby, 19-year-old Danny Rose meets Almunia's punch from 30 yards on the full volley."
+    description: "Making his first ever Premier League appearance in a North London Derby, 19 year old Danny Rose meets Almunia's punch from 30 yards on the full volley."
   },
   {
     id: 41,
@@ -883,20 +883,20 @@ const INITIAL_MOMENTS = [
     player: "Maynor Figueroa",
     homeTeam: "Stoke City",
     awayTeam: "Wigan Athletic",
-    score: "2 - 2",
+    score: "2 to 2",
     season: "2009/10",
     date: "12 Dec 2009",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Set Piece Wizardry",
-    ball: "Nike Total 90 Ascente Hi-Vis",
+    ball: "Nike Total 90 Ascente Hi Vis",
     sponsor: "188BET",
     stadium: "Britannia Stadium",
     referee: "Mike Dean",
     viewCount: 120692,
     youtubeId: "XDSkoJ_RS_I",
     startTime: 0,
-    commentary: "\"Quick free-kick taken by Figueroa FROM HIS OWN HALF! Thomas Sørensen is caught out!\"",
-    description: "Before Stoke can even line up after a foul inside Wigan's half, Honduran defender Maynor Figueroa blasts a 61-yard free-kick straight into the top corner."
+    commentary: "\"Quick free kick taken by Figueroa FROM HIS OWN HALF! Thomas Sørensen is caught out!\"",
+    description: "Before Stoke can even line up after a foul inside Wigan's half, Honduran defender Maynor Figueroa blasts a 61 yard free kick straight into the top corner."
   },
   {
     id: 42,
@@ -904,10 +904,10 @@ const INITIAL_MOMENTS = [
     player: "Pajtim Kasami",
     homeTeam: "Crystal Palace",
     awayTeam: "Fulham",
-    score: "1 - 4",
+    score: "1 to 4",
     season: "2013/14",
     date: "21 Oct 2013",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Proper Volley",
     ball: "Nike Incyte",
     sponsor: "Marathonbet",
@@ -916,19 +916,19 @@ const INITIAL_MOMENTS = [
     viewCount: 394312,
     youtubeId: "OWEtvlJZfA4",
     startTime: 0,
-    commentary: "\"Sascha Riether clips it forward... KASAMI! Chest control at full sprint and weak-foot volley!\"",
-    description: "On a Monday Night Football masterclass, Swiss midfielder Pajtim Kasami chests down a 45-yard pass on the run and volleys with his weaker right foot over Julian Speroni."
+    commentary: "\"Sascha Riether clips it forward... KASAMI! Chest control at full sprint and weak foot volley!\"",
+    description: "On a Monday Night Football masterclass, Swiss midfielder Pajtim Kasami chests down a 45 yard pass on the run and volleys with his weaker right foot over Julian Speroni."
   },
   {
     id: 43,
-    title: "Didier Drogba's Chest & Half-Turn Volley vs Liverpool",
+    title: "Didier Drogba's Chest & Half Turn Volley vs Liverpool",
     player: "Didier Drogba",
     homeTeam: "Chelsea",
     awayTeam: "Liverpool",
-    score: "1 - 0",
+    score: "1 to 0",
     season: "2006/07",
     date: "17 Sep 2006",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Thunderbastard",
     ball: "Nike Total 90 Aerow II",
     sponsor: "Samsung Mobile",
@@ -938,19 +938,19 @@ const INITIAL_MOMENTS = [
     youtubeId: "bL03tfv6fCg",
     startTime: 0,
     commentary: "\"Drogba chests it with Carragher on his back... SPINS AND FIRES! Reina didn't move!\"",
-    description: "Holding off Jamie Carragher on the edge of the box, Drogba chests the ball down and pivots 180 degrees to rifle a left-footed half-volley inside the post."
+    description: "Holding off Jamie Carragher on the edge of the box, Drogba chests the ball down and pivots 180 degrees to rifle a left footed half volley inside the post."
   },
   {
     id: 44,
-    title: "Portsmouth 7-4 Reading: Highest-Scoring Barclays Madness",
+    title: "Portsmouth 7 vs 4 Reading: Highest Scoring Barclays Madness",
     player: "Benjani & Niko Kranjčar",
     homeTeam: "Portsmouth",
     awayTeam: "Reading",
-    score: "7 - 4",
+    score: "7 to 4",
     season: "2007/08",
     date: "29 Sep 2007",
-    era: "Golden Barclays (2000-2009)",
-    category: "Proper Barclays Chaos",
+    era: "Golden Barclays (2000 to 2009)",
+    category: "Touchline Chaos",
     ball: "Nike Total 90 Aerow II",
     sponsor: "OKI / Kyocera",
     stadium: "Fratton Park",
@@ -959,7 +959,7 @@ const INITIAL_MOMENTS = [
     youtubeId: "EcbYYV64NZw",
     startTime: 0,
     commentary: "\"Six goals in the last 20 minutes! It's Portsmouth SEVEN, Reading FOUR!\"",
-    description: "Eleven goals, missed penalties, own goals, Benjani hat-trick, and zero defending in the highest-scoring game in Premier League history."
+    description: "Eleven goals, missed penalties, own goals, Benjani hat trick, and zero defending in the highest scoring game in Premier League history."
   },
   {
     id: 45,
@@ -967,10 +967,10 @@ const INITIAL_MOMENTS = [
     player: "Temuri Ketsbaia",
     homeTeam: "Newcastle",
     awayTeam: "Bolton",
-    score: "2 - 1",
+    score: "2 to 1",
     season: "1997/98",
     date: "17 Jan 1998",
-    era: "90s Chaos (1990-1999)",
+    era: "90s Chaos (1990 to 1999)",
     category: "Iconic Celebration",
     ball: "Mitre Ultimax",
     sponsor: "Newcastle Brown Ale",
@@ -980,20 +980,20 @@ const INITIAL_MOMENTS = [
     youtubeId: "xeMcXB29JTw",
     startTime: 0,
     commentary: "\"Ketsbaia scores a late winner... and now he's ripping his shirt off and attacking the McDonald's hoardings!\"",
-    description: "Furious at being benched, Georgian cult hero Temuri Ketsbaia scores a 90th-minute winner, hurls his shirt into the crowd, and violently boots the advertising boards."
+    description: "Furious at being benched, Georgian cult hero Temuri Ketsbaia scores a 90th minute winner, hurls his shirt into the crowd, and violently boots the advertising boards."
   },
   {
     id: 46,
-    title: "Jimmy Bullard's Half-Time Team Talk Finger-Wag Celebration",
+    title: "Jimmy Bullard's Half Time Team Talk Finger Wag Celebration",
     player: "Jimmy Bullard",
     homeTeam: "Man City",
     awayTeam: "Hull City",
-    score: "1 - 1",
+    score: "1 to 1",
     season: "2009/10",
     date: "28 Nov 2009",
-    era: "Golden Barclays (2000-2009)",
+    era: "Golden Barclays (2000 to 2009)",
     category: "Iconic Celebration",
-    ball: "Nike Total 90 Ascente Hi-Vis",
+    ball: "Nike Total 90 Ascente Hi Vis",
     sponsor: "Totesport.com",
     stadium: "Etihad Stadium",
     referee: "Lee Probert",
@@ -1001,19 +1001,19 @@ const INITIAL_MOMENTS = [
     youtubeId: "xnmAXUsoMAo",
     startTime: 0,
     commentary: "\"Bullard equalises... and all the Hull players sit in a circle while he recreates Phil Brown's pitchside team talk!\"",
-    description: "A year after Phil Brown humiliated Hull by keeping them on the pitch at half-time, Jimmy Bullard scores at the exact same end and mocks his own manager."
+    description: "A year after Phil Brown humiliated Hull by keeping them on the pitch at half time, Jimmy Bullard scores at the exact same end and mocks his own manager."
   },
   {
     id: 47,
-    title: "Sergio Agüero's 93:20 Title-Winning Chaos vs QPR",
+    title: "Sergio Agüero's 93:20 Title Winning Chaos vs QPR",
     player: "Sergio Agüero",
     homeTeam: "Man City",
     awayTeam: "QPR",
-    score: "3 - 2",
+    score: "3 to 2",
     season: "2011/12",
     date: "13 May 2012",
-    era: "Late Barclays (2010-2020)",
-    category: "Proper Barclays Chaos",
+    era: "Late Barclays (2010 to 2020)",
+    category: "Touchline Chaos",
     ball: "Nike Seitiro",
     sponsor: "Etihad Airways",
     stadium: "Etihad Stadium",
@@ -1026,16 +1026,16 @@ const INITIAL_MOMENTS = [
   },
   {
     id: 48,
-    title: "Luis Suárez's 50-Yard Lob & 4-Goal Destruction of Norwich",
+    title: "Luis Suárez's 50 Yard Lob & 4 Goal Destruction of Norwich",
     player: "Luis Suárez",
     homeTeam: "Liverpool",
     awayTeam: "Norwich City",
-    score: "5 - 1",
+    score: "5 to 1",
     season: "2013/14",
     date: "4 Dec 2013",
-    era: "Late Barclays (2010-2020)",
+    era: "Late Barclays (2010 to 2020)",
     category: "Thunderbastard",
-    ball: "Nike Incyte Hi-Vis",
+    ball: "Nike Incyte Hi Vis",
     sponsor: "Standard Chartered",
     stadium: "Anfield",
     referee: "Kevin Friend",
@@ -1043,20 +1043,20 @@ const INITIAL_MOMENTS = [
     youtubeId: "V8Kfc7dIcaA",
     startTime: 0,
     commentary: "\"Suárez flicks it over Fer, volleys from 40 yards... Four Puskás contenders in a single match!\"",
-    description: "A 45-yard dipping half-volley, a sombrero flick and volley, a curling free-kick, and a close-range finish in the ultimate individual Barclays performance."
+    description: "A 45 yard dipping half volley, a sombrero flick and volley, a curling free kick, and a close range finish in the ultimate individual Barclays performance."
   },
   {
     id: 49,
-    title: "Pedro Mendes' Halfway-Line Ghost Goal Dropped by Roy Carroll",
+    title: "Pedro Mendes' Halfway Line Ghost Goal Dropped by Roy Carroll",
     player: "Pedro Mendes & Roy Carroll",
     homeTeam: "Man Utd",
     awayTeam: "Tottenham",
-    score: "0 - 0",
+    score: "0 to 0",
     season: "2004/05",
     date: "4 Jan 2005",
-    era: "Golden Barclays (2000-2009)",
-    category: "Proper Barclays Chaos",
-    ball: "Nike Total 90 Aerow Hi-Vis",
+    era: "Golden Barclays (2000 to 2009)",
+    category: "Touchline Chaos",
+    ball: "Nike Total 90 Aerow Hi Vis",
     sponsor: "Thomson / Vodafone",
     stadium: "Old Trafford",
     referee: "Mark Clattenburg",
@@ -1064,20 +1064,20 @@ const INITIAL_MOMENTS = [
     youtubeId: "CXL-YOlsDqw",
     startTime: 0,
     commentary: "\"Pedro Mendes shoots from 50 yards... Roy Carroll spills it A YARD OVER THE LINE and claws it back! No goal given!\"",
-    description: "Pre-VAR peak Barclays theatre: Pedro Mendes lobs Roy Carroll from the halfway line, Carroll drops the ball three feet inside the net, claws it out, and play continues."
+    description: "Pre VAR peak Barclays theatre: Pedro Mendes lobs Roy Carroll from the halfway line, Carroll drops the ball three feet inside the net, claws it out, and play continues."
   },
   {
     id: 50,
-    title: "Johan Elmander's Cruyff-Spin & Pirouette Goal at Wolves",
+    title: "Johan Elmander's Cruyff Spin & Pirouette Goal at Wolves",
     player: "Johan Elmander",
     homeTeam: "Wolves",
     awayTeam: "Bolton",
-    score: "2 - 3",
+    score: "2 to 3",
     season: "2010/11",
     date: "13 Nov 2010",
-    era: "Late Barclays (2010-2020)",
-    category: "Solo Mazy",
-    ball: "Nike Total 90 Tracer Hi-Vis",
+    era: "Late Barclays (2010 to 2020)",
+    category: "Solo Golazo",
+    ball: "Nike Total 90 Tracer Hi Vis",
     sponsor: "188BET",
     stadium: "Molineux",
     referee: "Peter Walton",
@@ -1157,40 +1157,40 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 px-3 sm:px-4 py-2 flex flex-col justify-center text-xs sm:text-sm">
+    <div className="min-h-[100dvh] bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 px-2.5 sm:px-4 py-1.5 flex flex-col justify-center text-xs sm:text-sm overflow-x-hidden">
       {/* ONE UNIFIED MASTER CARD */}
-      <div className="w-full max-w-5xl mx-auto bg-gradient-to-b from-[#0C1933] to-[#081124] border border-cyan-500/30 rounded-2xl shadow-2xl relative overflow-hidden divide-y divide-slate-800/80">
+      <div className="w-full max-w-5xl mx-auto my-auto bg-gradient-to-b from-[#0C1933] to-[#081124] border border-cyan-500/30 rounded-2xl shadow-2xl relative overflow-hidden divide-y divide-slate-800/80">
         {/* Subtle Stadium Floodlight Glow */}
         <div className="pointer-events-none absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
 
         {/* 1. CARD HEADER & ROULETTE + SEARCH BUTTONS */}
-        <div className="p-3 sm:p-4 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-2.5 relative z-10">
+        <div className="p-2.5 sm:p-3.5 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-2 relative z-10">
           <div className="flex items-center space-x-2.5 w-full sm:w-auto justify-center sm:justify-start">
-            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-400 via-blue-600 to-indigo-900 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center shrink-0">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-400 via-blue-600 to-indigo-900 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center shrink-0">
               <div className="w-full h-full bg-[#061022] rounded-[6px] flex items-center justify-center">
-                <Trophy className="w-5 h-5 text-amber-400" />
+                <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" />
               </div>
             </div>
             <div>
               <div className="flex items-center space-x-2">
-                <span className="text-base sm:text-lg font-black tracking-tight text-white uppercase italic">
+                <span className="text-sm sm:text-lg font-black tracking-tight text-white uppercase italic">
                   PROPER <span className="text-cyan-400">BARCLAYS</span>
                 </span>
                 <span className="hidden sm:inline-block bg-amber-400 text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded uppercase tracking-wider">
                   1990 to 2020 Vault
                 </span>
               </div>
-              <p className="text-[11px] text-cyan-200/80 font-medium">
+              <p className="text-[10px] sm:text-[11px] text-cyan-200/80 font-medium">
                 Zero Robotic Pep Ball • 100% Screamers, Reducers &amp; Cult Heroes
               </p>
             </div>
           </div>
 
-          <div className="w-full max-w-[360px] sm:max-w-none sm:w-auto mx-auto sm:mx-0 px-3 sm:px-0 flex items-center justify-center gap-2.5">
+          <div className="w-full max-w-[360px] sm:max-w-none sm:w-auto mx-auto sm:mx-0 px-3 sm:px-0 flex items-center justify-center gap-2">
             <button
               onClick={() => setShowSearchVault((prev) => !prev)}
-              className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 font-bold px-3.5 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
+              className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 font-bold px-3 py-1.5 sm:py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
                 showSearchVault
                   ? 'bg-cyan-400 text-slate-950 border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.45)]'
                   : 'bg-slate-900/90 hover:bg-slate-800 text-cyan-300 border-cyan-500/40'
@@ -1202,7 +1202,7 @@ export default function App() {
 
             <button
               onClick={handleRandomRoulette}
-              className="flex-[1.35] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-3.5 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(251,191,36,0.45)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
+              className="flex-[1.35] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-3 py-1.5 sm:py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(251,191,36,0.45)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
             >
               <Shuffle className="w-3.5 h-3.5 stroke-[2.5] shrink-0 group-hover:rotate-180 transition-transform duration-300" />
               <span>Random Barclays Roulette</span>
@@ -1212,7 +1212,7 @@ export default function App() {
 
         {/* TOGGLEABLE SEARCH & FILTER VAULT PANEL */}
         {showSearchVault && (
-          <div className="p-3.5 sm:p-4 bg-[#08152C] relative z-10 space-y-2.5">
+          <div className="p-3 sm:p-4 bg-[#08152C] relative z-10 space-y-2.5">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-1.5">
                 <Film className="w-4 h-4 text-cyan-400" />
@@ -1238,7 +1238,7 @@ export default function App() {
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search player (e.g. Yeboah, King), club, ball, sponsor..."
-                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl pl-9 pr-8 py-2 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400"
+                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl pl-9 pr-8 py-1.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400"
                 />
                 {searchQuery && (
                   <button
@@ -1254,7 +1254,7 @@ export default function App() {
                 <select
                   value={selectedEra}
                   onChange={(e) => setSelectedEra(e.target.value)}
-                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl px-3 py-2 text-xs font-bold text-cyan-200 focus:outline-none focus:border-amber-400 cursor-pointer"
+                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl px-3 py-1.5 text-xs font-bold text-cyan-200 focus:outline-none focus:border-amber-400 cursor-pointer"
                 >
                   {ERA_FILTERS.map((era) => (
                     <option key={era} value={era} className="bg-slate-950 text-white">
@@ -1268,7 +1268,7 @@ export default function App() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl px-3 py-2 text-xs font-bold text-amber-300 focus:outline-none focus:border-amber-400 cursor-pointer"
+                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl px-3 py-1.5 text-xs font-bold text-amber-300 focus:outline-none focus:border-amber-400 cursor-pointer"
                 >
                   {CATEGORY_TAGS.map((tag) => (
                     <option key={tag} value={tag} className="bg-slate-950 text-white">
@@ -1281,7 +1281,7 @@ export default function App() {
 
             {/* Filtered Vault Entries List */}
             {filteredMoments.length === 0 ? (
-              <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-5 text-center space-y-1.5">
+              <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-4 text-center space-y-1.5">
                 <p className="text-xs font-bold text-slate-300">
                   No Barclays moments match that filter combination.
                 </p>
@@ -1297,14 +1297,14 @@ export default function App() {
                 </button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-2.5 max-h-80 overflow-y-auto pr-1">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2 max-h-64 overflow-y-auto pr-1">
                 {filteredMoments.map((m) => {
                   const isCurrent = m.id === activeMoment.id;
                   return (
                     <div
                       key={m.id}
                       onClick={() => handleSelectMoment(m)}
-                      className={`group rounded-xl p-3 transition-all cursor-pointer flex flex-col justify-between border ${
+                      className={`group rounded-xl p-2.5 transition-all cursor-pointer flex flex-col justify-between border ${
                         isCurrent
                           ? 'bg-gradient-to-b from-[#11254A] to-[#0B1730] border-amber-400'
                           : 'bg-slate-950/80 border-slate-800 hover:border-cyan-400/60 hover:bg-[#0D1B36]'
@@ -1324,7 +1324,7 @@ export default function App() {
                         </h3>
                       </div>
 
-                      <div className="flex items-center justify-between gap-2 mt-2 pt-1.5 border-t border-slate-800/80">
+                      <div className="flex items-center justify-between gap-2 mt-1.5 pt-1 border-t border-slate-800/80">
                         <span className="text-[11px] font-bold text-amber-400 truncate">
                           {m.player} ({m.barclaysRating}% Nostalgia)
                         </span>
@@ -1341,11 +1341,11 @@ export default function App() {
         )}
 
         {/* 2. SINGLE ACTIVE VAULT ENTRY SPOTLIGHT */}
-        <div className="p-3.5 sm:p-4 space-y-3 relative z-10 bg-[#070F20]/70">
+        <div className="p-2.5 sm:p-4 space-y-2.5 relative z-10 bg-[#070F20]/70">
           {/* Scoreboard & Era Bar */}
-          <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2.5 space-y-2">
+          <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2 space-y-1.5">
             {/* Top Row: Player, Season/Date & Category with equal spacing between all three and dynamic sizing */}
-            <div className="flex items-center justify-between gap-1.5 sm:gap-3 flex-nowrap w-full">
+            <div className="flex items-center justify-between gap-1 sm:gap-3 flex-nowrap w-full">
               <span
                 className={`bg-red-600 text-white ${getPlayerBadgeFontSize(
                   activeMoment.player
@@ -1365,15 +1365,15 @@ export default function App() {
             </div>
 
             {/* Second Row: Centered Match Scoreline */}
-            <div className="flex items-center justify-center pt-0.5">
-              <div className="inline-flex items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-xs font-black shadow-md">
-                <span className="px-3 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
+            <div className="flex items-center justify-center">
+              <div className="inline-flex items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-[11px] sm:text-xs font-black shadow-md">
+                <span className="px-2.5 py-0.5 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
                   {activeMoment.homeTeam}
                 </span>
-                <span className="px-3 py-1 bg-amber-400 text-slate-950 font-black tracking-tight">
-                  {activeMoment.score.replace('-', 'to')}
+                <span className="px-2.5 py-0.5 bg-amber-400 text-slate-950 font-black tracking-tight">
+                  {activeMoment.score}
                 </span>
-                <span className="px-3 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
+                <span className="px-2.5 py-0.5 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
                   {activeMoment.awayTeam}
                 </span>
               </div>
@@ -1381,75 +1381,75 @@ export default function App() {
           </div>
 
           {/* Title, Description, Transcript & Heritage Artifacts */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-2.5 sm:gap-4 items-center">
             <div className="lg:col-span-7 flex flex-col">
-              <h1 className="text-base sm:text-lg font-black text-white tracking-tight leading-snug">
+              <h1 className="text-sm sm:text-lg font-black text-white tracking-tight leading-snug">
                 {activeMoment.title}
               </h1>
 
-              <p className="text-slate-300 text-xs leading-relaxed mt-2">
+              <p className="text-slate-300 text-[11px] sm:text-xs leading-relaxed mt-1.5">
                 {activeMoment.description}
               </p>
 
               {/* Original Broadcast Transcript */}
-              <div className="mt-4 bg-slate-950/90 border border-amber-400/50 rounded-xl px-3.5 py-2.5 shadow-inner text-center">
-                <div className="flex items-center justify-center gap-1.5 text-[10px] text-amber-300 font-bold uppercase mb-1">
+              <div className="mt-2.5 sm:mt-3.5 bg-slate-950/90 border border-amber-400/50 rounded-xl px-3 py-2 shadow-inner text-center">
+                <div className="flex items-center justify-center gap-1.5 text-[9.5px] sm:text-[10px] text-amber-300 font-bold uppercase mb-0.5">
                   <Radio className="w-3 h-3 text-red-500 animate-ping" />
                   <span>ORIGINAL BROADCAST AUDIO TRANSCRIPT</span>
                 </div>
-                <p className="text-xs font-bold italic text-white leading-snug">
+                <p className="text-[11px] sm:text-xs font-bold italic text-white leading-snug">
                   {activeMoment.commentary}
                 </p>
               </div>
             </div>
 
             {/* Heritage Artifacts Grid + Proper Barclays Nostalgia Index Bar + Launch Video Button */}
-            <div className="lg:col-span-5 space-y-2.5">
-              <div className="grid grid-cols-2 gap-2">
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                  <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400 uppercase">
+            <div className="lg:col-span-5 space-y-2">
+              <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
+                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2">
+                  <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
                     <UserCheck className="w-3 h-3 text-cyan-400" />
                     <span>CULT HERO</span>
                   </div>
-                  <div className="text-xs font-black text-white mt-0.5 truncate">
+                  <div className="text-[11px] sm:text-xs font-black text-white mt-0.5 truncate">
                     {activeMoment.player}
                   </div>
                 </div>
 
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                  <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400 uppercase">
+                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2">
+                  <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
                     <CircleDot className="w-3 h-3 text-amber-400" />
                     <span>ICONIC MATCH BALL</span>
                   </div>
-                  <div className="text-xs font-black text-amber-300 mt-0.5 truncate">
+                  <div className="text-[11px] sm:text-xs font-black text-amber-300 mt-0.5 truncate">
                     {activeMoment.ball}
                   </div>
                 </div>
 
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                  <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400 uppercase">
+                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2">
+                  <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
                     <Shirt className="w-3 h-3 text-cyan-400" />
                     <span>CLASSIC SHIRT SPONSOR</span>
                   </div>
-                  <div className="text-xs font-black text-white mt-0.5 truncate">
+                  <div className="text-[11px] sm:text-xs font-black text-white mt-0.5 truncate">
                     {activeMoment.sponsor}
                   </div>
                 </div>
 
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                  <div className="flex items-center gap-1 text-[10px] font-bold text-slate-400 uppercase">
+                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2">
+                  <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
                     <MapPin className="w-3 h-3 text-emerald-400" />
                     <span>STADIUM &amp; REFEREE</span>
                   </div>
-                  <div className="text-[11px] font-bold text-white mt-0.5 truncate">
+                  <div className="text-[10.5px] sm:text-[11px] font-bold text-white mt-0.5 truncate">
                     {activeMoment.stadium} ({activeMoment.referee})
                   </div>
                 </div>
               </div>
 
               {/* Proper Barclays Nostalgia Index Bar */}
-              <div className="bg-slate-950/90 border border-cyan-500/30 rounded-xl p-3">
-                <div className="flex items-center justify-between text-[11px] font-black uppercase mb-1">
+              <div className="bg-slate-950/90 border border-cyan-500/30 rounded-xl p-2.5">
+                <div className="flex items-center justify-between text-[10.5px] sm:text-[11px] font-black uppercase mb-1">
                   <span className="text-cyan-300 tracking-wider">
                     Proper Barclays Nostalgia Index
                   </span>
@@ -1463,19 +1463,19 @@ export default function App() {
                     style={{ width: `${activeMoment.barclaysRating}%` }}
                   />
                 </div>
-                <div className="flex items-center justify-between text-[10px] text-slate-400 font-semibold mt-1">
+                <div className="flex items-center justify-between text-[9.5px] sm:text-[10px] text-slate-400 font-semibold mt-1">
                   <span>Vault Clip Views: {activeMoment.viewCount.toLocaleString()}</span>
                   <span>0 to 100% Nostalgia Scale</span>
                 </div>
               </div>
 
               {/* Direct YouTube Launch Button Centered Underneath the Nostalgia Index */}
-              <div className="pt-1 flex justify-center">
+              <div className="pt-0.5 flex justify-center">
                 <a
                   href={`https://www.youtube.com/watch?v=${activeMoment.youtubeId}${activeMoment.startTime > 0 ? `&t=${activeMoment.startTime}s` : ''}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black px-5 py-2.5 rounded-lg text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:scale-[1.02] transition"
+                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black px-5 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:scale-[1.02] transition"
                 >
                   <Play className="w-3.5 h-3.5 fill-current" />
                   <span>Launch video clip</span>
