@@ -28,7 +28,8 @@ const CATEGORY_TAGS = [
   'All Moments',
   'Thunderbastard',
   'Cult Hero',
-  '30-Yard Volley',
+  'Proper Volley',
+  'Proper Tackle',
   'Solo Mazy',
   'Proper Barclays Chaos',
   'Set Piece Wizardry',
@@ -67,7 +68,7 @@ const INITIAL_MOMENTS = [
     season: "1995/96",
     date: "21 Aug 1995",
     era: "90s Chaos (1990-1999)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Mitre Ultimax",
     sponsor: "Thistle Hotels",
     stadium: "Elland Road",
@@ -109,7 +110,7 @@ const INITIAL_MOMENTS = [
     season: "1999/00",
     date: "26 Mar 2000",
     era: "Golden Barclays (2000-2009)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Mitre Ultimax",
     sponsor: "Dr. Martens",
     stadium: "Upton Park",
@@ -172,7 +173,7 @@ const INITIAL_MOMENTS = [
     season: "2004/05",
     date: "24 Apr 2005",
     era: "Golden Barclays (2000-2009)",
-    category: "Thunderbastard",
+    category: "Proper Volley",
     ball: "Nike Total 90 Aerow",
     sponsor: "Vodafone",
     stadium: "Old Trafford",
@@ -214,7 +215,7 @@ const INITIAL_MOMENTS = [
     season: "2006/07",
     date: "23 Dec 2006",
     era: "Golden Barclays (2000-2009)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Nike Total 90 Aerow II Hi-Vis",
     sponsor: "AIG",
     stadium: "Villa Park",
@@ -235,7 +236,7 @@ const INITIAL_MOMENTS = [
     season: "2000/01",
     date: "1 Oct 2000",
     era: "Golden Barclays (2000-2009)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Nike Geo Merlin",
     sponsor: "Dreamcast",
     stadium: "Highbury",
@@ -479,24 +480,24 @@ const INITIAL_MOMENTS = [
   },
   {
     id: 22,
-    title: "Michu Conquers the Emirates in Stoppage Time",
-    player: "Michu",
-    homeTeam: "Arsenal",
-    awayTeam: "Swansea City",
-    score: "0 - 2",
-    season: "2012/13",
-    date: "1 Dec 2012",
-    era: "Late Barclays (2010-2020)",
-    category: "Cult Hero",
-    ball: "Nike Maxim Hi-Vis",
-    sponsor: "32Red",
-    stadium: "Emirates Stadium",
-    referee: "Mark Clattenburg",
-    viewCount: 14990,
-    youtubeId: "zGpEn6-z9Ew",
-    startTime: 100,
-    commentary: "\"Dyer slips in Michu... clinical! Two late goals for Michu at the Emirates!\"",
-    description: "Two ice-cold finishes in the final four minutes at the Emirates cemented Michu's status as a Barclays fantasy football deity."
+    title: "Ledley King's Superhuman Last-Ditch Tackle on Arjen Robben",
+    player: "Ledley King",
+    homeTeam: "Tottenham",
+    awayTeam: "Chelsea",
+    score: "2 - 1",
+    season: "2006/07",
+    date: "5 Nov 2006",
+    era: "Golden Barclays (2000-2009)",
+    category: "Proper Tackle",
+    ball: "Nike Total 90 Aerow II Hi-Vis",
+    sponsor: "Mansion",
+    stadium: "White Hart Lane",
+    referee: "Graham Poll",
+    viewCount: 412890,
+    youtubeId: "SjxmyjLp9tg",
+    startTime: 0,
+    commentary: "\"Robben is clean through on Robinson... LEDLEY KING! What a recovery tackle!\"",
+    description: "With one working knee and zero cartilage, Ledley King eats up 15 yards of turf to hook the ball cleanly off Arjen Robben's left boot just as he pulls the trigger."
   },
   {
     id: 23,
@@ -529,7 +530,7 @@ const INITIAL_MOMENTS = [
     season: "2006/07",
     date: "30 Sep 2006",
     era: "Golden Barclays (2000-2009)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Nike Total 90 Aerow II",
     sponsor: "Fly Emirates",
     stadium: "The Valley",
@@ -647,7 +648,7 @@ const INITIAL_MOMENTS = [
   },
   {
     id: 30,
-    title: "Roy Keane vs Patrick Vieira Highbury Tunnel Showdown",
+    title: "Roy Keane & Patrick Vieira Bone-Crunching Highbury Battles",
     player: "Roy Keane & Patrick Vieira",
     homeTeam: "Arsenal",
     awayTeam: "Man Utd",
@@ -655,7 +656,7 @@ const INITIAL_MOMENTS = [
     season: "2004/05",
     date: "1 Feb 2005",
     era: "Golden Barclays (2000-2009)",
-    category: "Proper Barclays Chaos",
+    category: "Proper Tackle",
     ball: "Nike Total 90 Aerow Hi-Vis",
     sponsor: "O2 / Vodafone",
     stadium: "Highbury",
@@ -663,8 +664,8 @@ const INITIAL_MOMENTS = [
     viewCount: 2863272,
     youtubeId: "-ue1BFiKTtI",
     startTime: 0,
-    commentary: "\"I'll see you out there! Shut your mouth! Graham Poll trying to keep Keane and Vieira apart!\"",
-    description: "Before kick-off in the cramped Highbury marble halls, Roy Keane unleashes a legendary tirade at Patrick Vieira for picking on Gary Neville."
+    commentary: "\"I'll see you out there! Shut your mouth! And now flying into 50-50 reducers on the pitch!\"",
+    description: "From the Highbury tunnel war of words straight into thunderous midfield reducers, Keane and Vieira defined the ferocity of Golden Era Barclays."
   },
   {
     id: 31,
@@ -676,7 +677,7 @@ const INITIAL_MOMENTS = [
     season: "2010/11",
     date: "5 Feb 2011",
     era: "Late Barclays (2010-2020)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Nike Total 90 Tracer Hi-Vis",
     sponsor: "Northern Rock",
     stadium: "St James' Park",
@@ -710,24 +711,24 @@ const INITIAL_MOMENTS = [
   },
   {
     id: 33,
-    title: "Dimitri Payet's Outrageous Rabona Assist vs Watford",
-    player: "Dimitri Payet",
-    homeTeam: "West Ham",
-    awayTeam: "Watford",
-    score: "2 - 4",
-    season: "2016/17",
-    date: "10 Sep 2016",
-    era: "Late Barclays (2010-2020)",
-    category: "Cult Hero",
-    ball: "Nike Ordem 4",
-    sponsor: "Betway",
-    stadium: "London Stadium",
-    referee: "Martin Atkinson",
-    viewCount: 99023,
-    youtubeId: "f5h2zlP_Glc",
+    title: "Sol Campbell's Endless Sliding Tackle onumb-Run at Old Trafford",
+    player: "Sol Campbell",
+    homeTeam: "Man Utd",
+    awayTeam: "Arsenal",
+    score: "0 - 1",
+    season: "2001/02",
+    date: "8 May 2002",
+    era: "Golden Barclays (2000-2009)",
+    category: "Proper Tackle",
+    ball: "Nike Geo Merlin",
+    sponsor: "Sega / Dreamcast",
+    stadium: "Old Trafford",
+    referee: "Paul Durkin",
+    viewCount: 215400,
+    youtubeId: "gM1Z1F2e6B0",
     startTime: 0,
-    commentary: "\"Payet on the left byline... A RABONA CROSS! Michail Antonio heads it in!\"",
-    description: "Pure playground showboating in a Premier League match as Payet wraps his right boot behind his standing leg to float a pinpoint cross onto Antonio's head."
+    commentary: "\"Sol Campbell comes across like a freight train! Took the ball, the man, and half the Old Trafford turf!\"",
+    description: "On the night Arsenal clinched the title at Old Trafford, Sol Campbell thundered into a bone-rattling touchline slide tackle that echoed around Manchester."
   },
   {
     id: 34,
@@ -739,7 +740,7 @@ const INITIAL_MOMENTS = [
     season: "2010/11",
     date: "12 Feb 2011",
     era: "Late Barclays (2010-2020)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Nike Total 90 Tracer Hi-Vis",
     sponsor: "Aon",
     stadium: "Old Trafford",
@@ -823,7 +824,7 @@ const INITIAL_MOMENTS = [
     season: "2006/07",
     date: "9 Dec 2006",
     era: "Golden Barclays (2000-2009)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Nike Total 90 Aerow II Hi-Vis",
     sponsor: "OKI",
     stadium: "Fratton Park",
@@ -836,24 +837,24 @@ const INITIAL_MOMENTS = [
   },
   {
     id: 39,
-    title: "Erik Edman's 41-Yard Anfield Screamer for Spurs",
-    player: "Erik Edman",
-    homeTeam: "Liverpool",
-    awayTeam: "Tottenham",
-    score: "2 - 2",
-    season: "2004/05",
-    date: "16 Apr 2005",
-    era: "Golden Barclays (2000-2009)",
-    category: "Thunderbastard",
-    ball: "Nike Total 90 Aerow",
-    sponsor: "Thomson",
-    stadium: "Anfield",
-    referee: "Mark Halsey",
-    viewCount: 52053,
-    youtubeId: "ErJLqi0kSi8",
+    title: "Nemanja Vidić Dives Head-First Into the Turf to Block",
+    player: "Nemanja Vidić",
+    homeTeam: "Man Utd",
+    awayTeam: "Swansea City",
+    score: "2 - 0",
+    season: "2013/14",
+    date: "11 Jan 2014",
+    era: "Late Barclays (2010-2020)",
+    category: "Proper Tackle",
+    ball: "Nike Incyte Hi-Vis",
+    sponsor: "Aon",
+    stadium: "Old Trafford",
+    referee: "Chris Foy",
+    viewCount: 318450,
+    youtubeId: "eb3p9s61m3A",
     startTime: 0,
-    commentary: "\"Erik Edman is 40 yards out... WHY NOT?! OH, WHAT A STRIKE!\"",
-    description: "Swedish left-back Erik Edman scored only one Premier League goal in his career—a 41-yard swerving missile into the Anfield Road top corner."
+    commentary: "\"Vidić throws his own head at ground level in front of a swinging boot! Pure Serbian steel!\"",
+    description: "After losing his footing, Nemanja Vidić launches his entire body horizontally two inches off the grass to block a shot with his face."
   },
   {
     id: 40,
@@ -865,7 +866,7 @@ const INITIAL_MOMENTS = [
     season: "2009/10",
     date: "14 Apr 2010",
     era: "Late Barclays (2010-2020)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Nike Total 90 Ascente",
     sponsor: "Mansion",
     stadium: "White Hart Lane",
@@ -907,7 +908,7 @@ const INITIAL_MOMENTS = [
     season: "2013/14",
     date: "21 Oct 2013",
     era: "Late Barclays (2010-2020)",
-    category: "30-Yard Volley",
+    category: "Proper Volley",
     ball: "Nike Incyte",
     sponsor: "Marathonbet",
     stadium: "Selhurst Park",
@@ -1156,7 +1157,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 px-3 sm:px-4 py-6 flex flex-col justify-center text-xs sm:text-sm">
+    <div className="min-h-screen bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 px-3 sm:px-4 py-2 flex flex-col justify-center text-xs sm:text-sm">
       {/* ONE UNIFIED MASTER CARD */}
       <div className="w-full max-w-5xl mx-auto bg-gradient-to-b from-[#0C1933] to-[#081124] border border-cyan-500/30 rounded-2xl shadow-2xl relative overflow-hidden divide-y divide-slate-800/80">
         {/* Subtle Stadium Floodlight Glow */}
@@ -1164,7 +1165,7 @@ export default function App() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
 
         {/* 1. CARD HEADER & ROULETTE + SEARCH BUTTONS */}
-        <div className="p-3.5 sm:p-5 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-3 relative z-10">
+        <div className="p-3 sm:p-4 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-2.5 relative z-10">
           <div className="flex items-center space-x-2.5 w-full sm:w-auto justify-center sm:justify-start">
             <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-400 via-blue-600 to-indigo-900 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center shrink-0">
               <div className="w-full h-full bg-[#061022] rounded-[6px] flex items-center justify-center">
@@ -1211,7 +1212,7 @@ export default function App() {
 
         {/* TOGGLEABLE SEARCH & FILTER VAULT PANEL */}
         {showSearchVault && (
-          <div className="p-4 sm:p-5 bg-[#08152C] relative z-10 space-y-3">
+          <div className="p-3.5 sm:p-4 bg-[#08152C] relative z-10 space-y-2.5">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-1.5">
                 <Film className="w-4 h-4 text-cyan-400" />
@@ -1228,15 +1229,15 @@ export default function App() {
               </button>
             </div>
 
-            {/* Search Input & Era Dropdown */}
-            <div className="grid grid-cols-1 md:grid-cols-12 gap-2.5">
-              <div className="md:col-span-8 relative">
+            {/* Search Input, Era Dropdown & Category Dropdown */}
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
+              <div className="md:col-span-6 relative">
                 <Search className="w-3.5 h-3.5 text-cyan-400 absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  placeholder="Search player (e.g. Yeboah, Taarabt), club, match ball, sponsor, stadium..."
+                  placeholder="Search player (e.g. Yeboah, King), club, ball, sponsor..."
                   className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl pl-9 pr-8 py-2 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400"
                 />
                 {searchQuery && (
@@ -1249,7 +1250,7 @@ export default function App() {
                 )}
               </div>
 
-              <div className="md:col-span-4">
+              <div className="md:col-span-3">
                 <select
                   value={selectedEra}
                   onChange={(e) => setSelectedEra(e.target.value)}
@@ -1262,26 +1263,20 @@ export default function App() {
                   ))}
                 </select>
               </div>
-            </div>
 
-            {/* Category Tag Pills */}
-            <div className="flex flex-wrap gap-1">
-              {CATEGORY_TAGS.map((tag) => {
-                const active = selectedCategory === tag;
-                return (
-                  <button
-                    key={tag}
-                    onClick={() => setSelectedCategory(tag)}
-                    className={`px-2.5 py-1 rounded-md text-[11px] font-extrabold uppercase tracking-wider transition cursor-pointer ${
-                      active
-                        ? 'bg-amber-400 text-slate-950 shadow-[0_0_10px_rgba(251,191,36,0.4)]'
-                        : 'bg-slate-900/90 text-slate-300 border border-slate-800 hover:border-cyan-400/50'
-                    }`}
-                  >
-                    {tag}
-                  </button>
-                );
-              })}
+              <div className="md:col-span-3">
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl px-3 py-2 text-xs font-bold text-amber-300 focus:outline-none focus:border-amber-400 cursor-pointer"
+                >
+                  {CATEGORY_TAGS.map((tag) => (
+                    <option key={tag} value={tag} className="bg-slate-950 text-white">
+                      {tag}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             {/* Filtered Vault Entries List */}
@@ -1346,7 +1341,7 @@ export default function App() {
         )}
 
         {/* 2. SINGLE ACTIVE VAULT ENTRY SPOTLIGHT */}
-        <div className="p-4 sm:p-5 space-y-4 relative z-10 bg-[#070F20]/70">
+        <div className="p-3.5 sm:p-4 space-y-3 relative z-10 bg-[#070F20]/70">
           {/* Scoreboard & Era Bar */}
           <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2.5 space-y-2">
             {/* Top Row: Player, Season/Date & Category with equal spacing between all three and dynamic sizing */}
@@ -1470,7 +1465,7 @@ export default function App() {
                 </div>
                 <div className="flex items-center justify-between text-[10px] text-slate-400 font-semibold mt-1">
                   <span>Vault Clip Views: {activeMoment.viewCount.toLocaleString()}</span>
-                  <span>0–100% Nostalgia Scale</span>
+                  <span>0 to 100% Nostalgia Scale</span>
                 </div>
               </div>
 
