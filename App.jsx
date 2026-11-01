@@ -1339,37 +1339,32 @@ export default function App() {
         {/* 2. SINGLE ACTIVE VAULT ENTRY SPOTLIGHT */}
         <div className="p-4 sm:p-5 space-y-4 relative z-10 bg-[#070F20]/70">
           {/* Scoreboard & Era Bar */}
-          <div className="flex flex-wrap items-center justify-between gap-2.5 bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2.5">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded uppercase tracking-widest">
+          <div className="flex flex-col gap-2.5 bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2.5 sm:p-3">
+            {/* Row 1: Player Name, Season/Date, and Category on one single dynamic line */}
+            <div className="flex flex-nowrap items-center justify-between gap-1 sm:gap-2 w-full min-w-0 overflow-hidden">
+              <span className="bg-red-600 text-white text-[clamp(8.5px,2.3vw,12px)] font-black px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink min-w-0 truncate">
                 {activeMoment.player}
               </span>
-              <span className="text-[11px] font-bold text-cyan-300 uppercase tracking-wider">
+              <span className="text-[clamp(8.5px,2.3vw,12px)] font-bold text-cyan-300 uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
                 {activeMoment.season} • {activeMoment.date}
               </span>
-              <span className="inline-flex items-center gap-1 bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
-                <Sparkles className="w-3 h-3" />
-                {activeMoment.category}
+              <span className="inline-flex items-center gap-0.5 sm:gap-1 bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 text-[clamp(8.5px,2.3vw,11px)] font-extrabold px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink min-w-0 truncate">
+                <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
+                <span className="truncate">{activeMoment.category}</span>
               </span>
             </div>
 
-            <div className="flex items-center gap-2.5">
-              <div className="flex items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-xs font-black">
-                <span className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
+            {/* Row 2: Centered Match Scoreline */}
+            <div className="flex items-center justify-center text-center w-full pt-0.5">
+              <div className="inline-flex items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-xs sm:text-sm font-black shadow-md">
+                <span className="px-3 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
                   {activeMoment.homeTeam}
                 </span>
-                <span className="px-2.5 py-1 bg-amber-400 text-slate-950 font-black tracking-tight">
+                <span className="px-3 py-1 bg-amber-400 text-slate-950 font-black tracking-tight">
                   {activeMoment.score}
                 </span>
-                <span className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
+                <span className="px-3 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
                   {activeMoment.awayTeam}
-                </span>
-              </div>
-
-              <div className="hidden sm:flex items-center gap-1 bg-gradient-to-r from-amber-500/20 to-red-500/20 border border-amber-400/50 px-2.5 py-0.5 rounded-full">
-                <Flame className="w-3 h-3 text-amber-400 fill-amber-400" />
-                <span className="text-[11px] font-black text-amber-300 uppercase">
-                  {activeMoment.barclaysRating}%
                 </span>
               </div>
             </div>
@@ -1485,7 +1480,7 @@ export default function App() {
         </div>
       </div>
       {/* Empty space at the bottom for comfortable scrolling */}
-      <div className="h-12" />
+      <div className="pb-24" />
     </div>
   );
 }
