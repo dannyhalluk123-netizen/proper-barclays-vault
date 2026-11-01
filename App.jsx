@@ -1172,29 +1172,29 @@ export default function App() {
                 </span>
               </div>
               <p className="text-[11px] text-cyan-200/80 font-medium">
-                Zero Robotic Pep Ball • 100% Screamers, Reducers & Cult Heroes
+                Zero Robotic Pep Ball • 100% Screamers, Reducers &amp; Cult Heroes
               </p>
             </div>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 w-full sm:w-auto">
             <button
               onClick={() => setShowSearchVault((prev) => !prev)}
-              className={`inline-flex items-center justify-center gap-1 font-bold px-2.5 py-2 rounded-lg text-[11px] uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
+              className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 font-bold px-3.5 py-2.5 sm:py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
                 showSearchVault
                   ? 'bg-cyan-400 text-slate-950 border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.45)]'
                   : 'bg-slate-900/90 hover:bg-slate-800 text-cyan-300 border-cyan-500/40'
               }`}
             >
-              <Search className="w-3.5 h-3.5" />
-              <span>{showSearchVault ? 'Close' : 'Search'}</span>
+              <Search className="w-3.5 h-3.5 shrink-0" />
+              <span>{showSearchVault ? 'Close Vault' : 'Search Vault'}</span>
             </button>
 
             <button
               onClick={handleRandomRoulette}
-              className="group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-3.5 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(251,191,36,0.45)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
+              className="flex-[1.6] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-4 py-2.5 sm:py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(251,191,36,0.45)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
             >
-              <Shuffle className="w-3.5 h-3.5 stroke-[2.5] group-hover:rotate-180 transition-transform duration-300" />
+              <Shuffle className="w-3.5 h-3.5 stroke-[2.5] shrink-0 group-hover:rotate-180 transition-transform duration-300" />
               <span>Random Barclays Roulette</span>
             </button>
           </div>
@@ -1339,29 +1339,32 @@ export default function App() {
         {/* 2. SINGLE ACTIVE VAULT ENTRY SPOTLIGHT */}
         <div className="p-4 sm:p-5 space-y-4 relative z-10 bg-[#070F20]/70">
           {/* Scoreboard & Era Bar */}
-          <div className="flex flex-col gap-2.5 bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2.5 sm:p-3">
-            {/* Row 1: Player Name, Season/Date, and Category on one single dynamic line */}
-            <div className="flex flex-nowrap items-center justify-between gap-1 sm:gap-2 w-full min-w-0 overflow-hidden">
-              <span className="bg-red-600 text-white text-[clamp(8.5px,2.3vw,12px)] font-black px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink min-w-0 truncate">
-                {activeMoment.player}
-              </span>
-              <span className="text-[clamp(8.5px,2.3vw,12px)] font-bold text-cyan-300 uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
-                {activeMoment.season} • {activeMoment.date}
-              </span>
-              <span className="inline-flex items-center gap-0.5 sm:gap-1 bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 text-[clamp(8.5px,2.3vw,11px)] font-extrabold px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink min-w-0 truncate">
+          <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2.5 space-y-2">
+            {/* Top Row: Player, Season, Date & Category dynamically scaled on 1 line */}
+            <div className="flex items-center justify-between gap-1 sm:gap-2 flex-nowrap overflow-hidden">
+              <div className="flex items-center gap-1 sm:gap-2 min-w-0 flex-nowrap">
+                <span className="bg-red-600 text-white text-[clamp(8px,2.3vw,11px)] font-black px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-wider truncate shrink">
+                  {activeMoment.player}
+                </span>
+                <span className="text-[clamp(8px,2.2vw,11px)] font-bold text-cyan-300 uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
+                  {activeMoment.season} • {activeMoment.date}
+                </span>
+              </div>
+
+              <span className="inline-flex items-center gap-1 bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 text-[clamp(8px,2.1vw,10px)] font-extrabold px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
                 <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
-                <span className="truncate">{activeMoment.category}</span>
+                <span>{activeMoment.category}</span>
               </span>
             </div>
 
-            {/* Row 2: Centered Match Scoreline */}
-            <div className="flex items-center justify-center text-center w-full pt-0.5">
-              <div className="inline-flex items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-xs sm:text-sm font-black shadow-md">
+            {/* Second Row: Centered Match Scoreline */}
+            <div className="flex items-center justify-center pt-0.5">
+              <div className="inline-flex items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-xs font-black shadow-md">
                 <span className="px-3 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
                   {activeMoment.homeTeam}
                 </span>
                 <span className="px-3 py-1 bg-amber-400 text-slate-950 font-black tracking-tight">
-                  {activeMoment.score}
+                  {activeMoment.score.replace('-', 'to')}
                 </span>
                 <span className="px-3 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
                   {activeMoment.awayTeam}
@@ -1372,17 +1375,17 @@ export default function App() {
 
           {/* Title, Description, Transcript & Launch Button */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
-            <div className="lg:col-span-7 space-y-2.5">
+            <div className="lg:col-span-7 flex flex-col">
               <h1 className="text-base sm:text-lg font-black text-white tracking-tight leading-snug">
                 {activeMoment.title}
               </h1>
 
-              <p className="text-slate-300 text-xs leading-relaxed">
+              <p className="text-slate-300 text-xs leading-relaxed mt-2">
                 {activeMoment.description}
               </p>
 
               {/* Direct YouTube Launch Button Centered */}
-              <div className="pt-0.5 flex justify-center">
+              <div className="mt-3.5 mb-4 flex justify-center">
                 <a
                   href={`https://www.youtube.com/watch?v=${activeMoment.youtubeId}${activeMoment.startTime > 0 ? `&t=${activeMoment.startTime}s` : ''}`}
                   target="_blank"
@@ -1396,15 +1399,12 @@ export default function App() {
               </div>
 
               {/* Original Broadcast Transcript */}
-              <div className="bg-slate-950/90 border border-amber-400/50 rounded-xl p-3 shadow-inner">
-                <div className="flex items-center justify-between text-[10px] text-amber-300 font-bold uppercase mb-1">
-                  <span className="flex items-center gap-1">
-                    <Radio className="w-3 h-3 text-red-500 animate-ping" />
-                    ORIGINAL BROADCAST AUDIO TRANSCRIPT
-                  </span>
-                  <span className="text-cyan-300">{activeMoment.player}</span>
+              <div className="bg-slate-950/90 border border-amber-400/50 rounded-xl px-3.5 py-2.5 shadow-inner text-center">
+                <div className="flex items-center justify-center gap-1.5 text-[10px] text-amber-300 font-bold uppercase mb-1">
+                  <Radio className="w-3 h-3 text-red-500 animate-ping" />
+                  <span>ORIGINAL BROADCAST AUDIO TRANSCRIPT</span>
                 </div>
-                <p className="text-xs font-bold italic text-white">
+                <p className="text-xs font-bold italic text-white leading-snug">
                   {activeMoment.commentary}
                 </p>
               </div>
