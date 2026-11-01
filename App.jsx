@@ -1157,15 +1157,15 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-[100dvh] bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 px-2.5 sm:px-4 py-1.5 flex flex-col justify-center text-xs sm:text-sm overflow-x-hidden">
+    <div className="min-h-[100dvh] bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 px-2.5 sm:px-4 py-2 flex flex-col justify-center text-xs sm:text-sm overflow-x-hidden">
       {/* ONE UNIFIED MASTER CARD */}
-      <div className="w-full max-w-5xl mx-auto my-auto bg-gradient-to-b from-[#0C1933] to-[#081124] border border-cyan-500/30 rounded-2xl shadow-2xl relative overflow-hidden divide-y divide-slate-800/80">
+      <div className="w-full max-w-5xl min-h-[88dvh] sm:min-h-0 flex flex-col mx-auto my-auto bg-gradient-to-b from-[#0C1933] to-[#081124] border border-cyan-500/30 rounded-2xl shadow-2xl relative overflow-hidden divide-y divide-slate-800/80">
         {/* Subtle Stadium Floodlight Glow */}
         <div className="pointer-events-none absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
 
         {/* 1. CARD HEADER & ROULETTE + SEARCH BUTTONS */}
-        <div className="p-2.5 sm:p-3.5 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-2 relative z-10">
+        <div className="py-3.5 px-3 sm:p-4 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-3 relative z-10 shrink-0">
           <div className="flex items-center space-x-2.5 w-full sm:w-auto justify-center sm:justify-start">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-400 via-blue-600 to-indigo-900 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center shrink-0">
               <div className="w-full h-full bg-[#061022] rounded-[6px] flex items-center justify-center">
@@ -1190,7 +1190,7 @@ export default function App() {
           <div className="w-full max-w-[360px] sm:max-w-none sm:w-auto mx-auto sm:mx-0 px-3 sm:px-0 flex items-center justify-center gap-2">
             <button
               onClick={() => setShowSearchVault((prev) => !prev)}
-              className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 font-bold px-3 py-1.5 sm:py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
+              className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 font-bold px-3 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
                 showSearchVault
                   ? 'bg-cyan-400 text-slate-950 border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.45)]'
                   : 'bg-slate-900/90 hover:bg-slate-800 text-cyan-300 border-cyan-500/40'
@@ -1202,7 +1202,7 @@ export default function App() {
 
             <button
               onClick={handleRandomRoulette}
-              className="flex-[1.35] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-3 py-1.5 sm:py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(251,191,36,0.45)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
+              className="flex-[1.6] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-3 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(251,191,36,0.45)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
             >
               <Shuffle className="w-3.5 h-3.5 stroke-[2.5] shrink-0 group-hover:rotate-180 transition-transform duration-300" />
               <span>Random Barclays Roulette</span>
@@ -1212,7 +1212,7 @@ export default function App() {
 
         {/* TOGGLEABLE SEARCH & FILTER VAULT PANEL */}
         {showSearchVault && (
-          <div className="p-3 sm:p-4 bg-[#08152C] relative z-10 space-y-2.5">
+          <div className="p-3 sm:p-4 bg-[#08152C] relative z-10 space-y-2.5 shrink-0">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-1.5">
                 <Film className="w-4 h-4 text-cyan-400" />
@@ -1341,9 +1341,9 @@ export default function App() {
         )}
 
         {/* 2. SINGLE ACTIVE VAULT ENTRY SPOTLIGHT */}
-        <div className="p-2.5 sm:p-4 space-y-2.5 relative z-10 bg-[#070F20]/70">
+        <div className="py-4 px-3 sm:p-5 flex-1 flex flex-col justify-between space-y-3.5 sm:space-y-4 relative z-10 bg-[#070F20]/70">
           {/* Scoreboard & Era Bar */}
-          <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2 space-y-1.5">
+          <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2.5 sm:p-3 space-y-2">
             {/* Top Row: Player, Season/Date & Category with equal spacing between all three and dynamic sizing */}
             <div className="flex items-center justify-between gap-1 sm:gap-3 flex-nowrap w-full">
               <span
@@ -1367,13 +1367,13 @@ export default function App() {
             {/* Second Row: Centered Match Scoreline */}
             <div className="flex items-center justify-center">
               <div className="inline-flex items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-[11px] sm:text-xs font-black shadow-md">
-                <span className="px-2.5 py-0.5 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
+                <span className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
                   {activeMoment.homeTeam}
                 </span>
-                <span className="px-2.5 py-0.5 bg-amber-400 text-slate-950 font-black tracking-tight">
+                <span className="px-2.5 py-1 bg-amber-400 text-slate-950 font-black tracking-tight">
                   {activeMoment.score}
                 </span>
-                <span className="px-2.5 py-0.5 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
+                <span className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
                   {activeMoment.awayTeam}
                 </span>
               </div>
@@ -1381,19 +1381,21 @@ export default function App() {
           </div>
 
           {/* Title, Description, Transcript & Heritage Artifacts */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-2.5 sm:gap-4 items-center">
-            <div className="lg:col-span-7 flex flex-col">
-              <h1 className="text-sm sm:text-lg font-black text-white tracking-tight leading-snug">
-                {activeMoment.title}
-              </h1>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 sm:gap-5 items-center flex-1">
+            <div className="lg:col-span-7 flex flex-col justify-between space-y-3">
+              <div>
+                <h1 className="text-sm sm:text-lg font-black text-white tracking-tight leading-snug">
+                  {activeMoment.title}
+                </h1>
 
-              <p className="text-slate-300 text-[11px] sm:text-xs leading-relaxed mt-1.5">
-                {activeMoment.description}
-              </p>
+                <p className="text-slate-300 text-[11px] sm:text-xs leading-relaxed mt-2">
+                  {activeMoment.description}
+                </p>
+              </div>
 
               {/* Original Broadcast Transcript */}
-              <div className="mt-2.5 sm:mt-3.5 bg-slate-950/90 border border-amber-400/50 rounded-xl px-3 py-2 shadow-inner text-center">
-                <div className="flex items-center justify-center gap-1.5 text-[9.5px] sm:text-[10px] text-amber-300 font-bold uppercase mb-0.5">
+              <div className="bg-slate-950/90 border border-amber-400/50 rounded-xl px-3.5 py-3 shadow-inner text-center">
+                <div className="flex items-center justify-center gap-1.5 text-[9.5px] sm:text-[10px] text-amber-300 font-bold uppercase mb-1">
                   <Radio className="w-3 h-3 text-red-500 animate-ping" />
                   <span>ORIGINAL BROADCAST AUDIO TRANSCRIPT</span>
                 </div>
@@ -1404,52 +1406,52 @@ export default function App() {
             </div>
 
             {/* Heritage Artifacts Grid + Proper Barclays Nostalgia Index Bar + Launch Video Button */}
-            <div className="lg:col-span-5 space-y-2">
-              <div className="grid grid-cols-2 gap-1.5 sm:gap-2">
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2">
+            <div className="lg:col-span-5 flex flex-col justify-between space-y-3">
+              <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
+                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
                   <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
                     <UserCheck className="w-3 h-3 text-cyan-400" />
                     <span>CULT HERO</span>
                   </div>
-                  <div className="text-[11px] sm:text-xs font-black text-white mt-0.5 truncate">
+                  <div className="text-[11px] sm:text-xs font-black text-white mt-1 truncate">
                     {activeMoment.player}
                   </div>
                 </div>
 
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2">
+                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
                   <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
                     <CircleDot className="w-3 h-3 text-amber-400" />
                     <span>ICONIC MATCH BALL</span>
                   </div>
-                  <div className="text-[11px] sm:text-xs font-black text-amber-300 mt-0.5 truncate">
+                  <div className="text-[11px] sm:text-xs font-black text-amber-300 mt-1 truncate">
                     {activeMoment.ball}
                   </div>
                 </div>
 
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2">
+                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
                   <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
                     <Shirt className="w-3 h-3 text-cyan-400" />
                     <span>CLASSIC SHIRT SPONSOR</span>
                   </div>
-                  <div className="text-[11px] sm:text-xs font-black text-white mt-0.5 truncate">
+                  <div className="text-[11px] sm:text-xs font-black text-white mt-1 truncate">
                     {activeMoment.sponsor}
                   </div>
                 </div>
 
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2">
+                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
                   <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
                     <MapPin className="w-3 h-3 text-emerald-400" />
                     <span>STADIUM &amp; REFEREE</span>
                   </div>
-                  <div className="text-[10.5px] sm:text-[11px] font-bold text-white mt-0.5 truncate">
+                  <div className="text-[10.5px] sm:text-[11px] font-bold text-white mt-1 truncate">
                     {activeMoment.stadium} ({activeMoment.referee})
                   </div>
                 </div>
               </div>
 
               {/* Proper Barclays Nostalgia Index Bar */}
-              <div className="bg-slate-950/90 border border-cyan-500/30 rounded-xl p-2.5">
-                <div className="flex items-center justify-between text-[10.5px] sm:text-[11px] font-black uppercase mb-1">
+              <div className="bg-slate-950/90 border border-cyan-500/30 rounded-xl p-3">
+                <div className="flex items-center justify-between text-[10.5px] sm:text-[11px] font-black uppercase mb-1.5">
                   <span className="text-cyan-300 tracking-wider">
                     Proper Barclays Nostalgia Index
                   </span>
@@ -1457,25 +1459,25 @@ export default function App() {
                     {activeMoment.barclaysRating}%
                   </span>
                 </div>
-                <div className="w-full h-2 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                <div className="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden p-0.5">
                   <div
                     className="h-full bg-gradient-to-r from-cyan-400 via-amber-400 to-red-500 rounded-full transition-all duration-500"
                     style={{ width: `${activeMoment.barclaysRating}%` }}
                   />
                 </div>
-                <div className="flex items-center justify-between text-[9.5px] sm:text-[10px] text-slate-400 font-semibold mt-1">
+                <div className="flex items-center justify-between text-[9.5px] sm:text-[10px] text-slate-400 font-semibold mt-1.5">
                   <span>Vault Clip Views: {activeMoment.viewCount.toLocaleString()}</span>
                   <span>0 to 100% Nostalgia Scale</span>
                 </div>
               </div>
 
               {/* Direct YouTube Launch Button Centered Underneath the Nostalgia Index */}
-              <div className="pt-0.5 flex justify-center">
+              <div className="pt-1 flex justify-center">
                 <a
                   href={`https://www.youtube.com/watch?v=${activeMoment.youtubeId}${activeMoment.startTime > 0 ? `&t=${activeMoment.startTime}s` : ''}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black px-5 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:scale-[1.02] transition"
+                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black px-6 py-2.5 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:scale-[1.02] transition"
                 >
                   <Play className="w-3.5 h-3.5 fill-current" />
                   <span>Launch video clip</span>
