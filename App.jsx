@@ -1089,7 +1089,7 @@ const INITIAL_MOMENTS = [
   }
 ];
 
-// Calculate Proper Barclays Nostalgia Index (60% minimum up to 100%) based on YouTube clip views relative to all clips in the vault
+// Calculate Proper Barclays Nostalgia Index (40% minimum up to 100%) based on YouTube clip views relative to all clips in the vault
 const LOG_VIEWS = INITIAL_MOMENTS.map((m) => Math.log10(Math.max(m.viewCount, 1)));
 const MIN_LOG_VIEWS = Math.min(...LOG_VIEWS);
 const MAX_LOG_VIEWS = Math.max(...LOG_VIEWS);
@@ -1100,7 +1100,7 @@ const MOMENTS_WITH_INDEX = INITIAL_MOMENTS.map((m) => {
     MAX_LOG_VIEWS > MIN_LOG_VIEWS
       ? (logVal - MIN_LOG_VIEWS) / (MAX_LOG_VIEWS - MIN_LOG_VIEWS)
       : 1;
-  const nostalgicIndex = Math.max(60, Math.min(100, Math.round(60 + normalized * 40)));
+  const nostalgicIndex = Math.max(40, Math.min(100, Math.round(40 + normalized * 60)));
   return {
     ...m,
     barclaysRating: nostalgicIndex
@@ -1156,6 +1156,24 @@ export default function App() {
     return 'text-[clamp(8.5px,2.35vw,11px)]';
   };
 
+  // Dynamic font size helpers for title and description inside fixed height scoreboard box
+  const getTitleFontSize = (title) => {
+    const len = title.length;
+    if (len > 48) return 'text-[clamp(11.5px,3.1vw,15px)]';
+    if (len > 38) return 'text-[clamp(12px,3.3vw,16px)]';
+    return 'text-[clamp(13px,3.6vw,17px)]';
+  };
+
+  const getDescriptionFontSize = (desc) => {
+    const len = desc.length;
+    if (len > 165) return 'text-[clamp(9.5px,2.45vw,11.5px)]';
+    if (len > 135) return 'text-[clamp(10px,2.6vw,12px)]';
+    return 'text-[clamp(10.5px,2.75vw,12.5px)]';
+  };
+
+  // Equal width wings for the score pill based on the longer team name so the score stays dead center
+  const teamWingMinCh = Math.max(activeMoment.homeTeam.length, activeMoment.awayTeam.length) + 3;
+
   return (
     <div className="min-h-[100dvh] bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 px-2.5 sm:px-4 py-2 flex flex-col justify-center text-xs sm:text-sm overflow-x-hidden">
       {/* ONE UNIFIED MASTER CARD */}
@@ -1165,7 +1183,7 @@ export default function App() {
         <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
 
         {/* 1. CARD HEADER & ROULETTE + SEARCH BUTTONS */}
-        <div className="py-3.5 px-3 sm:p-4 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-3 relative z-10 shrink-0">
+        <div className="py-3 px-3 sm:p-4 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-2.5 relative z-10 shrink-0">
           <div className="flex items-center space-x-2.5 w-full sm:w-auto justify-center sm:justify-start">
             <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-400 via-blue-600 to-indigo-900 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center shrink-0">
               <div className="w-full h-full bg-[#061022] rounded-[6px] flex items-center justify-center">
@@ -1192,7 +1210,7 @@ export default function App() {
               onClick={() => setShowSearchVault((prev) => !prev)}
               className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 font-bold px-3 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
                 showSearchVault
-                  ? 'bg-cyan-400 text-slate-950 border-cyan-300 shadow-[0_0_20px_rgba(34,211,238,0.45)]'
+                  ? 'bg-cyan-400 text-slate-950 border-cyan-300 shadow-[0_0_12px_rgba(34,211,238,0.3)]'
                   : 'bg-slate-900/90 hover:bg-slate-800 text-cyan-300 border-cyan-500/40'
               }`}
             >
@@ -1202,7 +1220,7 @@ export default function App() {
 
             <button
               onClick={handleRandomRoulette}
-              className="flex-[1.6] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-3 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_20px_rgba(251,191,36,0.45)] hover:shadow-[0_0_30px_rgba(251,191,36,0.8)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
+              className="flex-[1.6] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-3 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_10px_rgba(251,191,36,0.25)] hover:shadow-[0_0_16px_rgba(251,191,36,0.45)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
             >
               <Shuffle className="w-3.5 h-3.5 stroke-[2.5] shrink-0 group-hover:rotate-180 transition-transform duration-300" />
               <span>Random Barclays Roulette</span>
@@ -1341,11 +1359,11 @@ export default function App() {
         )}
 
         {/* 2. SINGLE ACTIVE VAULT ENTRY SPOTLIGHT */}
-        <div className="py-4 px-3 sm:p-5 flex-1 flex flex-col justify-between space-y-3.5 sm:space-y-4 relative z-10 bg-[#070F20]/70">
-          {/* Scoreboard & Era Bar */}
-          <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-2.5 sm:p-3 space-y-2">
-            {/* Top Row: Player, Season/Date & Category with equal spacing between all three and dynamic sizing */}
-            <div className="flex items-center justify-between gap-1 sm:gap-3 flex-nowrap w-full">
+        <div className="py-3.5 px-3 sm:p-5 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4 relative z-10 bg-[#070F20]/70">
+          {/* Fixed Height Scoreboard, Era Bar, Title & Description Box */}
+          <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-3 h-[196px] sm:h-[205px] flex flex-col justify-between overflow-hidden shrink-0">
+            {/* Row 1: Player, Season/Date & Category with equal spacing between all three and dynamic sizing */}
+            <div className="flex items-center justify-between gap-1 sm:gap-3 flex-nowrap w-full shrink-0">
               <span
                 className={`bg-red-600 text-white ${getPlayerBadgeFontSize(
                   activeMoment.player
@@ -1364,126 +1382,136 @@ export default function App() {
               </span>
             </div>
 
-            {/* Second Row: Centered Match Scoreline */}
-            <div className="flex items-center justify-center">
-              <div className="inline-flex items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-[11px] sm:text-xs font-black shadow-md">
-                <span className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
+            {/* Row 2: Symmetrical Centered Match Scoreline */}
+            <div className="flex items-center justify-center shrink-0">
+              <div className="inline-grid grid-cols-[1fr_auto_1fr] items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-[11px] sm:text-xs font-black shadow-md">
+                <span
+                  style={{ minWidth: `${teamWingMinCh}ch` }}
+                  className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase text-center whitespace-nowrap"
+                >
                   {activeMoment.homeTeam}
                 </span>
-                <span className="px-2.5 py-1 bg-amber-400 text-slate-950 font-black tracking-tight">
+                <span className="px-2.5 py-1 bg-amber-400 text-slate-950 font-black tracking-tight text-center whitespace-nowrap">
                   {activeMoment.score}
                 </span>
-                <span className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase">
+                <span
+                  style={{ minWidth: `${teamWingMinCh}ch` }}
+                  className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase text-center whitespace-nowrap"
+                >
                   {activeMoment.awayTeam}
                 </span>
               </div>
             </div>
+
+            {/* Row 3: Highlight Title */}
+            <h1
+              className={`${getTitleFontSize(
+                activeMoment.title
+              )} font-black text-white tracking-tight leading-snug text-center line-clamp-2 shrink-0`}
+            >
+              {activeMoment.title}
+            </h1>
+
+            {/* Row 4: Highlight Description */}
+            <p
+              className={`text-slate-200 ${getDescriptionFontSize(
+                activeMoment.description
+              )} leading-snug text-center line-clamp-3 shrink-0`}
+            >
+              {activeMoment.description}
+            </p>
           </div>
 
-          {/* Title, Description, Transcript & Heritage Artifacts */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-3.5 sm:gap-5 items-center flex-1">
-            <div className="lg:col-span-7 flex flex-col justify-between space-y-3">
-              <div>
-                <h1 className="text-sm sm:text-lg font-black text-white tracking-tight leading-snug">
-                  {activeMoment.title}
-                </h1>
-
-                <p className="text-slate-300 text-[11px] sm:text-xs leading-relaxed mt-2">
-                  {activeMoment.description}
-                </p>
+          {/* Heritage Artifacts Grid, Broadcast Audio Transcript, Nostalgia Index & Launch Video Button */}
+          <div className="flex-1 flex flex-col justify-between space-y-2.5 sm:space-y-3">
+            {/* 4-Grid Info Metadata */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2.5 shrink-0">
+              <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
+                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
+                  <UserCheck className="w-3 h-3 text-cyan-400" />
+                  <span>PLAYER</span>
+                </div>
+                <div className="text-[11px] sm:text-xs font-black text-white mt-1 truncate">
+                  {activeMoment.player}
+                </div>
               </div>
 
-              {/* Original Broadcast Transcript */}
-              <div className="bg-slate-950/90 border border-amber-400/50 rounded-xl px-3.5 py-3 shadow-inner text-center">
-                <div className="flex items-center justify-center gap-1.5 text-[9.5px] sm:text-[10px] text-amber-300 font-bold uppercase mb-1">
-                  <Radio className="w-3 h-3 text-red-500 animate-ping" />
-                  <span>ORIGINAL BROADCAST AUDIO TRANSCRIPT</span>
+              <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
+                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
+                  <CircleDot className="w-3 h-3 text-amber-400" />
+                  <span>ICONIC MATCH BALL</span>
                 </div>
-                <p className="text-[11px] sm:text-xs font-bold italic text-white leading-snug">
-                  {activeMoment.commentary}
-                </p>
+                <div className="text-[11px] sm:text-xs font-black text-white mt-1 truncate">
+                  {activeMoment.ball}
+                </div>
+              </div>
+
+              <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
+                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
+                  <Shirt className="w-3 h-3 text-cyan-400" />
+                  <span>CLASSIC SHIRT SPONSOR</span>
+                </div>
+                <div className="text-[11px] sm:text-xs font-black text-white mt-1 truncate">
+                  {activeMoment.sponsor}
+                </div>
+              </div>
+
+              <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
+                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
+                  <MapPin className="w-3 h-3 text-emerald-400" />
+                  <span>STADIUM &amp; REFEREE</span>
+                </div>
+                <div className="text-[10.5px] sm:text-[11px] font-bold text-white mt-1 truncate">
+                  {activeMoment.stadium} ({activeMoment.referee})
+                </div>
               </div>
             </div>
 
-            {/* Heritage Artifacts Grid + Proper Barclays Nostalgia Index Bar + Launch Video Button */}
-            <div className="lg:col-span-5 flex flex-col justify-between space-y-3">
-              <div className="grid grid-cols-2 gap-2 sm:gap-2.5">
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                  <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
-                    <UserCheck className="w-3 h-3 text-cyan-400" />
-                    <span>CULT HERO</span>
-                  </div>
-                  <div className="text-[11px] sm:text-xs font-black text-white mt-1 truncate">
-                    {activeMoment.player}
-                  </div>
-                </div>
-
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                  <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
-                    <CircleDot className="w-3 h-3 text-amber-400" />
-                    <span>ICONIC MATCH BALL</span>
-                  </div>
-                  <div className="text-[11px] sm:text-xs font-black text-amber-300 mt-1 truncate">
-                    {activeMoment.ball}
-                  </div>
-                </div>
-
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                  <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
-                    <Shirt className="w-3 h-3 text-cyan-400" />
-                    <span>CLASSIC SHIRT SPONSOR</span>
-                  </div>
-                  <div className="text-[11px] sm:text-xs font-black text-white mt-1 truncate">
-                    {activeMoment.sponsor}
-                  </div>
-                </div>
-
-                <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                  <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
-                    <MapPin className="w-3 h-3 text-emerald-400" />
-                    <span>STADIUM &amp; REFEREE</span>
-                  </div>
-                  <div className="text-[10.5px] sm:text-[11px] font-bold text-white mt-1 truncate">
-                    {activeMoment.stadium} ({activeMoment.referee})
-                  </div>
-                </div>
+            {/* Original Broadcast Transcript (Positioned directly above the Nostalgia Index) */}
+            <div className="bg-slate-950/90 border border-amber-400/50 rounded-xl px-3.5 py-2.5 h-[76px] sm:h-[80px] flex flex-col justify-center shadow-inner text-center shrink-0 overflow-hidden">
+              <div className="flex items-center justify-center gap-1.5 text-[9.5px] sm:text-[10px] text-amber-300 font-bold uppercase mb-1 shrink-0">
+                <Radio className="w-3 h-3 text-red-500 animate-ping" />
+                <span>ORIGINAL BROADCAST AUDIO TRANSCRIPT</span>
               </div>
+              <p className="text-[11px] sm:text-xs font-bold italic text-white leading-snug line-clamp-2">
+                {activeMoment.commentary}
+              </p>
+            </div>
 
-              {/* Proper Barclays Nostalgia Index Bar */}
-              <div className="bg-slate-950/90 border border-cyan-500/30 rounded-xl p-3">
-                <div className="flex items-center justify-between text-[10.5px] sm:text-[11px] font-black uppercase mb-1.5">
-                  <span className="text-cyan-300 tracking-wider">
-                    Proper Barclays Nostalgia Index
-                  </span>
-                  <span className="text-amber-400">
-                    {activeMoment.barclaysRating}%
-                  </span>
-                </div>
-                <div className="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden p-0.5">
-                  <div
-                    className="h-full bg-gradient-to-r from-cyan-400 via-amber-400 to-red-500 rounded-full transition-all duration-500"
-                    style={{ width: `${activeMoment.barclaysRating}%` }}
-                  />
-                </div>
-                <div className="flex items-center justify-between text-[9.5px] sm:text-[10px] text-slate-400 font-semibold mt-1.5">
-                  <span>Vault Clip Views: {activeMoment.viewCount.toLocaleString()}</span>
-                  <span>0 to 100% Nostalgia Scale</span>
-                </div>
+            {/* Proper Barclays Nostalgia Index Bar */}
+            <div className="bg-slate-950/90 border border-cyan-500/30 rounded-xl p-2.5 sm:p-3 shrink-0">
+              <div className="flex items-center justify-between text-[10.5px] sm:text-[11px] font-black uppercase mb-1.5">
+                <span className="text-cyan-300 tracking-wider">
+                  Proper Barclays Nostalgia Index
+                </span>
+                <span className="text-amber-400">
+                  {activeMoment.barclaysRating}%
+                </span>
               </div>
+              <div className="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden p-0.5">
+                <div
+                  className="h-full bg-gradient-to-r from-cyan-400 via-amber-400 to-red-500 rounded-full transition-all duration-500"
+                  style={{ width: `${activeMoment.barclaysRating}%` }}
+                />
+              </div>
+              <div className="flex items-center justify-between text-[9.5px] sm:text-[10px] text-slate-400 font-semibold mt-1.5">
+                <span>Vault Clip Views: {activeMoment.viewCount.toLocaleString()}</span>
+                <span>0 to 100% Nostalgia Scale</span>
+              </div>
+            </div>
 
-              {/* Direct YouTube Launch Button Centered Underneath the Nostalgia Index */}
-              <div className="pt-1 flex justify-center">
-                <a
-                  href={`https://www.youtube.com/watch?v=${activeMoment.youtubeId}${activeMoment.startTime > 0 ? `&t=${activeMoment.startTime}s` : ''}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black px-6 py-2.5 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_15px_rgba(220,38,38,0.4)] hover:scale-[1.02] transition"
-                >
-                  <Play className="w-3.5 h-3.5 fill-current" />
-                  <span>Launch video clip</span>
-                  <ExternalLink className="w-3 h-3" />
-                </a>
-              </div>
+            {/* Enlarged Direct YouTube Launch Button Centered Underneath the Nostalgia Index */}
+            <div className="pt-0.5 flex justify-center shrink-0">
+              <a
+                href={`https://www.youtube.com/watch?v=${activeMoment.youtubeId}${activeMoment.startTime > 0 ? `&t=${activeMoment.startTime}s` : ''}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black px-8 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider shadow-[0_0_18px_rgba(220,38,38,0.45)] hover:scale-[1.02] active:scale-95 transition"
+              >
+                <Play className="w-4 h-4 fill-current" />
+                <span>Launch video clip</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
         </div>
