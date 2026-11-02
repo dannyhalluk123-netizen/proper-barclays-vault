@@ -18,22 +18,21 @@ import {
 } from 'lucide-react';
 
 const ERA_FILTERS = [
-  'All Eras (1990 to 2020)',
-  '90s Chaos (1990 to 1999)',
-  'Golden Barclays (2000 to 2009)',
-  'Late Barclays (2010 to 2020)'
+  'All Eras',
+  '1990s',
+  '2000s',
+  '2010s'
 ];
 
 const CATEGORY_TAGS = [
-  'All Moments',
-  'Thunderbastard',
-  'Cult Hero',
+  'All Categories',
   'Proper Volley',
+  'Thunderbastard',
+  'Solo Run',
+  'Free Kick',
+  'Last Minute',
   'Proper Tackle',
-  'Solo Golazo',
-  'Touchline Chaos',
-  'Set Piece Wizardry',
-  'Iconic Celebration'
+  'Iconic Moment'
 ];
 
 const INITIAL_MOMENTS = [
@@ -46,7 +45,7 @@ const INITIAL_MOMENTS = [
     score: "0 to 2",
     season: "2011/12",
     date: "2 May 2012",
-    era: "Late Barclays (2010 to 2020)",
+    era: "2010s",
     category: "Thunderbastard",
     ball: "Nike Seitiro Hi Vis",
     sponsor: "Virgin Money",
@@ -67,7 +66,7 @@ const INITIAL_MOMENTS = [
     score: "1 to 0",
     season: "1995/96",
     date: "21 Aug 1995",
-    era: "90s Chaos (1990 to 1999)",
+    era: "1990s",
     category: "Proper Volley",
     ball: "Mitre Ultimax",
     sponsor: "Thistle Hotels",
@@ -88,7 +87,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 4",
     season: "1995/96",
     date: "23 Sep 1995",
-    era: "90s Chaos (1990 to 1999)",
+    era: "1990s",
     category: "Thunderbastard",
     ball: "Mitre Ultimax",
     sponsor: "Thistle Hotels",
@@ -109,7 +108,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "1999/00",
     date: "26 Mar 2000",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Proper Volley",
     ball: "Mitre Ultimax",
     sponsor: "Dr. Martens",
@@ -130,8 +129,8 @@ const INITIAL_MOMENTS = [
     score: "0 to 2",
     season: "2001/02",
     date: "2 Mar 2002",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Solo Golazo",
+    era: "2000s",
+    category: "Solo Run",
     ball: "Nike Geo Merlin",
     sponsor: "Sega / Dreamcast",
     stadium: "St James' Park",
@@ -151,8 +150,8 @@ const INITIAL_MOMENTS = [
     score: "5 to 0",
     season: "1996/97",
     date: "21 Dec 1996",
-    era: "90s Chaos (1990 to 1999)",
-    category: "Iconic Celebration",
+    era: "1990s",
+    category: "Iconic Moment",
     ball: "Mitre Ultimax",
     sponsor: "Sharp",
     stadium: "Old Trafford",
@@ -172,7 +171,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "2004/05",
     date: "24 Apr 2005",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Proper Volley",
     ball: "Nike Total 90 Aerow",
     sponsor: "Vodafone",
@@ -193,8 +192,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "1993/94",
     date: "24 Oct 1993",
-    era: "90s Chaos (1990 to 1999)",
-    category: "Cult Hero",
+    era: "1990s",
+    category: "Solo Run",
     ball: "Mitre Pro Max",
     sponsor: "Dimplex",
     stadium: "The Dell",
@@ -214,7 +213,7 @@ const INITIAL_MOMENTS = [
     score: "0 to 3",
     season: "2006/07",
     date: "23 Dec 2006",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Proper Volley",
     ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "AIG",
@@ -235,7 +234,7 @@ const INITIAL_MOMENTS = [
     score: "1 to 0",
     season: "2000/01",
     date: "1 Oct 2000",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Proper Volley",
     ball: "Nike Geo Merlin",
     sponsor: "Dreamcast",
@@ -256,7 +255,7 @@ const INITIAL_MOMENTS = [
     score: "0 to 3",
     season: "1996/97",
     date: "17 Aug 1996",
-    era: "90s Chaos (1990 to 1999)",
+    era: "1990s",
     category: "Thunderbastard",
     ball: "Mitre Ultimax",
     sponsor: "Sharp",
@@ -277,7 +276,7 @@ const INITIAL_MOMENTS = [
     score: "1 to 1",
     season: "2004/05",
     date: "30 Apr 2005",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Thunderbastard",
     ball: "Nike Total 90 Aerow",
     sponsor: "Carlsberg",
@@ -298,8 +297,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 0",
     season: "2011/12",
     date: "9 Apr 2012",
-    era: "Late Barclays (2010 to 2020)",
-    category: "Solo Golazo",
+    era: "2010s",
+    category: "Solo Run",
     ball: "Nike Seitiro",
     sponsor: "Virgin Money",
     stadium: "St James' Park",
@@ -319,8 +318,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "2012/13",
     date: "15 Dec 2012",
-    era: "Late Barclays (2010 to 2020)",
-    category: "Cult Hero",
+    era: "2010s",
+    category: "Solo Run",
     ball: "Nike Maxim Hi Vis",
     sponsor: "AirAsia",
     stadium: "Loftus Road",
@@ -340,8 +339,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 2",
     season: "2002/03",
     date: "26 Apr 2003",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Cult Hero",
+    era: "2000s",
+    category: "Iconic Moment",
     ball: "Nike Geo Merlin II",
     sponsor: "Reebok",
     stadium: "Reebok Stadium",
@@ -361,7 +360,7 @@ const INITIAL_MOMENTS = [
     score: "1 to 0",
     season: "2002/03",
     date: "19 Apr 2003",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Thunderbastard",
     ball: "Nike Geo Merlin II",
     sponsor: "Reebok",
@@ -382,8 +381,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "2008/09",
     date: "1 Nov 2008",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Set Piece Wizardry",
+    era: "2000s",
+    category: "Iconic Moment",
     ball: "Nike Total 90 Omni Hi Vis",
     sponsor: "Britannia",
     stadium: "Britannia Stadium",
@@ -403,8 +402,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "2005/06",
     date: "20 Aug 2005",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Cult Hero",
+    era: "2000s",
+    category: "Proper Volley",
     ball: "Nike Total 90 Aerow",
     sponsor: "Lonsdale",
     stadium: "Ewood Park",
@@ -424,8 +423,8 @@ const INITIAL_MOMENTS = [
     score: "1 to 4",
     season: "2004/05",
     date: "7 Nov 2004",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Cult Hero",
+    era: "2000s",
+    category: "Proper Volley",
     ball: "Nike Total 90 Aerow",
     sponsor: "Northern Rock",
     stadium: "St James' Park",
@@ -445,7 +444,7 @@ const INITIAL_MOMENTS = [
     score: "4 to 0",
     season: "2003/04",
     date: "13 Dec 2003",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Thunderbastard",
     ball: "Nike Geo Merlin",
     sponsor: "Northern Rock",
@@ -466,8 +465,8 @@ const INITIAL_MOMENTS = [
     score: "0 to 5",
     season: "2012/13",
     date: "18 Aug 2012",
-    era: "Late Barclays (2010 to 2020)",
-    category: "Cult Hero",
+    era: "2010s",
+    category: "Iconic Moment",
     ball: "Nike Maxim",
     sponsor: "32Red",
     stadium: "Loftus Road",
@@ -487,7 +486,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "2006/07",
     date: "5 Nov 2006",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Proper Tackle",
     ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "Mansion",
@@ -508,7 +507,7 @@ const INITIAL_MOMENTS = [
     score: "1 to 1",
     season: "2006/07",
     date: "10 Dec 2006",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Thunderbastard",
     ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "Samsung Mobile",
@@ -529,7 +528,7 @@ const INITIAL_MOMENTS = [
     score: "1 to 2",
     season: "2006/07",
     date: "30 Sep 2006",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Proper Volley",
     ball: "Nike Total 90 Aerow II",
     sponsor: "Fly Emirates",
@@ -550,8 +549,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 0",
     season: "2007/08",
     date: "30 Jan 2008",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Set Piece Wizardry",
+    era: "2000s",
+    category: "Free Kick",
     ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "AIG",
     stadium: "Old Trafford",
@@ -571,8 +570,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "2002/03",
     date: "19 Oct 2002",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Thunderbastard",
+    era: "2000s",
+    category: "Last Minute",
     ball: "Nike Geo Merlin II",
     sponsor: "Kejian",
     stadium: "Goodison Park",
@@ -592,8 +591,8 @@ const INITIAL_MOMENTS = [
     score: "3 to 0",
     season: "2002/03",
     date: "16 Nov 2002",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Solo Golazo",
+    era: "2000s",
+    category: "Solo Run",
     ball: "Nike Geo Merlin II",
     sponsor: "O2",
     stadium: "Highbury",
@@ -613,8 +612,8 @@ const INITIAL_MOMENTS = [
     score: "4 to 2",
     season: "2003/04",
     date: "9 Apr 2004",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Solo Golazo",
+    era: "2000s",
+    category: "Solo Run",
     ball: "Nike Geo Merlin",
     sponsor: "O2",
     stadium: "Highbury",
@@ -634,8 +633,8 @@ const INITIAL_MOMENTS = [
     score: "1 to 0",
     season: "1998/99",
     date: "26 Sep 1998",
-    era: "90s Chaos (1990 to 1999)",
-    category: "Touchline Chaos",
+    era: "1990s",
+    category: "Iconic Moment",
     ball: "Mitre Ultimax",
     sponsor: "Sanderson",
     stadium: "Hillsborough",
@@ -655,7 +654,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 4",
     season: "2004/05",
     date: "1 Feb 2005",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Proper Tackle",
     ball: "Nike Total 90 Aerow Hi Vis",
     sponsor: "O2 / Vodafone",
@@ -676,8 +675,8 @@ const INITIAL_MOMENTS = [
     score: "4 to 4",
     season: "2010/11",
     date: "5 Feb 2011",
-    era: "Late Barclays (2010 to 2020)",
-    category: "Proper Volley",
+    era: "2010s",
+    category: "Last Minute",
     ball: "Nike Total 90 Tracer Hi Vis",
     sponsor: "Northern Rock",
     stadium: "St James' Park",
@@ -697,8 +696,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 2",
     season: "2015/16",
     date: "2 Apr 2016",
-    era: "Late Barclays (2010 to 2020)",
-    category: "Set Piece Wizardry",
+    era: "2010s",
+    category: "Free Kick",
     ball: "Nike Ordem 3",
     sponsor: "Betway",
     stadium: "Upton Park",
@@ -718,7 +717,7 @@ const INITIAL_MOMENTS = [
     score: "0 to 1",
     season: "2001/02",
     date: "8 May 2002",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Proper Tackle",
     ball: "Nike Geo Merlin",
     sponsor: "Sega / Dreamcast",
@@ -739,7 +738,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "2010/11",
     date: "12 Feb 2011",
-    era: "Late Barclays (2010 to 2020)",
+    era: "2010s",
     category: "Proper Volley",
     ball: "Nike Total 90 Tracer Hi Vis",
     sponsor: "Aon",
@@ -760,7 +759,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "2002/03",
     date: "1 Dec 2002",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Thunderbastard",
     ball: "Nike Geo Merlin II",
     sponsor: "NTL",
@@ -781,8 +780,8 @@ const INITIAL_MOMENTS = [
     score: "3 to 1",
     season: "2001/02",
     date: "4 Nov 2001",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Set Piece Wizardry",
+    era: "2000s",
+    category: "Free Kick",
     ball: "Nike Geo Merlin",
     sponsor: "Carlsberg",
     stadium: "Anfield",
@@ -802,8 +801,8 @@ const INITIAL_MOMENTS = [
     score: "1 to 1",
     season: "2006/07",
     date: "19 Nov 2006",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Cult Hero",
+    era: "2000s",
+    category: "Proper Volley",
     ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "bet24",
     stadium: "White Hart Lane",
@@ -823,7 +822,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 0",
     season: "2006/07",
     date: "9 Dec 2006",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Proper Volley",
     ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "OKI",
@@ -844,7 +843,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 0",
     season: "2013/14",
     date: "11 Jan 2014",
-    era: "Late Barclays (2010 to 2020)",
+    era: "2010s",
     category: "Proper Tackle",
     ball: "Nike Incyte Hi Vis",
     sponsor: "Aon",
@@ -865,7 +864,7 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "2009/10",
     date: "14 Apr 2010",
-    era: "Late Barclays (2010 to 2020)",
+    era: "2010s",
     category: "Proper Volley",
     ball: "Nike Total 90 Ascente",
     sponsor: "Mansion",
@@ -886,8 +885,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 2",
     season: "2009/10",
     date: "12 Dec 2009",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Set Piece Wizardry",
+    era: "2000s",
+    category: "Free Kick",
     ball: "Nike Total 90 Ascente Hi Vis",
     sponsor: "188BET",
     stadium: "Britannia Stadium",
@@ -907,7 +906,7 @@ const INITIAL_MOMENTS = [
     score: "1 to 4",
     season: "2013/14",
     date: "21 Oct 2013",
-    era: "Late Barclays (2010 to 2020)",
+    era: "2010s",
     category: "Proper Volley",
     ball: "Nike Incyte",
     sponsor: "Marathonbet",
@@ -928,7 +927,7 @@ const INITIAL_MOMENTS = [
     score: "1 to 0",
     season: "2006/07",
     date: "17 Sep 2006",
-    era: "Golden Barclays (2000 to 2009)",
+    era: "2000s",
     category: "Thunderbastard",
     ball: "Nike Total 90 Aerow II",
     sponsor: "Samsung Mobile",
@@ -949,8 +948,8 @@ const INITIAL_MOMENTS = [
     score: "7 to 4",
     season: "2007/08",
     date: "29 Sep 2007",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Touchline Chaos",
+    era: "2000s",
+    category: "Iconic Moment",
     ball: "Nike Total 90 Aerow II",
     sponsor: "OKI / Kyocera",
     stadium: "Fratton Park",
@@ -970,8 +969,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 1",
     season: "1997/98",
     date: "17 Jan 1998",
-    era: "90s Chaos (1990 to 1999)",
-    category: "Iconic Celebration",
+    era: "1990s",
+    category: "Last Minute",
     ball: "Mitre Ultimax",
     sponsor: "Newcastle Brown Ale",
     stadium: "St James' Park",
@@ -991,8 +990,8 @@ const INITIAL_MOMENTS = [
     score: "1 to 1",
     season: "2009/10",
     date: "28 Nov 2009",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Iconic Celebration",
+    era: "2000s",
+    category: "Iconic Moment",
     ball: "Nike Total 90 Ascente Hi Vis",
     sponsor: "Totesport.com",
     stadium: "Etihad Stadium",
@@ -1012,8 +1011,8 @@ const INITIAL_MOMENTS = [
     score: "3 to 2",
     season: "2011/12",
     date: "13 May 2012",
-    era: "Late Barclays (2010 to 2020)",
-    category: "Touchline Chaos",
+    era: "2010s",
+    category: "Last Minute",
     ball: "Nike Seitiro",
     sponsor: "Etihad Airways",
     stadium: "Etihad Stadium",
@@ -1033,7 +1032,7 @@ const INITIAL_MOMENTS = [
     score: "5 to 1",
     season: "2013/14",
     date: "4 Dec 2013",
-    era: "Late Barclays (2010 to 2020)",
+    era: "2010s",
     category: "Thunderbastard",
     ball: "Nike Incyte Hi Vis",
     sponsor: "Standard Chartered",
@@ -1054,8 +1053,8 @@ const INITIAL_MOMENTS = [
     score: "0 to 0",
     season: "2004/05",
     date: "4 Jan 2005",
-    era: "Golden Barclays (2000 to 2009)",
-    category: "Touchline Chaos",
+    era: "2000s",
+    category: "Iconic Moment",
     ball: "Nike Total 90 Aerow Hi Vis",
     sponsor: "Thomson / Vodafone",
     stadium: "Old Trafford",
@@ -1075,8 +1074,8 @@ const INITIAL_MOMENTS = [
     score: "2 to 3",
     season: "2010/11",
     date: "13 Nov 2010",
-    era: "Late Barclays (2010 to 2020)",
-    category: "Solo Golazo",
+    era: "2010s",
+    category: "Solo Run",
     ball: "Nike Total 90 Tracer Hi Vis",
     sponsor: "188BET",
     stadium: "Molineux",
@@ -1112,15 +1111,15 @@ export default function App() {
   const [activeMoment, setActiveMoment] = useState(MOMENTS_WITH_INDEX[0]);
   const [showSearchVault, setShowSearchVault] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedEra, setSelectedEra] = useState('All Eras (1990 to 2020)');
-  const [selectedCategory, setSelectedCategory] = useState('All Moments');
+  const [selectedEra, setSelectedEra] = useState('All Eras');
+  const [selectedCategory, setSelectedCategory] = useState('All Categories');
 
   const filteredMoments = useMemo(() => {
     return moments.filter((m) => {
       const matchesEra =
-        selectedEra === 'All Eras (1990 to 2020)' || m.era === selectedEra;
+        selectedEra === 'All Eras' || m.era === selectedEra;
       const matchesCategory =
-        selectedCategory === 'All Moments' || m.category === selectedCategory;
+        selectedCategory === 'All Categories' || m.category === selectedCategory;
       const q = searchQuery.trim().toLowerCase();
       const matchesSearch =
         !q ||
@@ -1175,31 +1174,40 @@ export default function App() {
   const teamWingMinCh = Math.max(activeMoment.homeTeam.length, activeMoment.awayTeam.length) + 3;
 
   return (
-    <div className="min-h-[100dvh] bg-[#050B16] text-slate-100 font-sans selection:bg-cyan-400 selection:text-slate-950 px-2.5 sm:px-4 py-2 flex flex-col justify-center text-xs sm:text-sm overflow-x-hidden">
+    <div
+      className="min-h-[100dvh] bg-[#041f12] text-white font-sans selection:bg-amber-400 selection:text-emerald-950 px-2.5 sm:px-4 py-2 flex flex-col justify-center text-xs sm:text-sm overflow-x-hidden"
+      style={{
+        backgroundImage:
+          'repeating-linear-gradient(90deg, rgba(16, 185, 129, 0.05) 0px, rgba(16, 185, 129, 0.05) 48px, transparent 48px, transparent 96px)'
+      }}
+    >
       {/* ONE UNIFIED MASTER CARD */}
-      <div className="w-full max-w-5xl min-h-[88dvh] sm:min-h-0 flex flex-col mx-auto my-auto bg-gradient-to-b from-[#0C1933] to-[#081124] border border-cyan-500/30 rounded-2xl shadow-2xl relative overflow-hidden divide-y divide-slate-800/80">
-        {/* Subtle Stadium Floodlight Glow */}
-        <div className="pointer-events-none absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl" />
+      <div className="w-full max-w-5xl min-h-[88dvh] sm:min-h-0 flex flex-col mx-auto my-auto bg-gradient-to-b from-[#0a3620] to-[#062314] border-2 border-white/40 rounded-2xl shadow-2xl relative overflow-hidden divide-y divide-white/20">
+        {/* Subtle Stadium Turf Floodlight Glow */}
+        <div className="pointer-events-none absolute -top-24 -left-24 w-96 h-96 bg-emerald-400/10 rounded-full blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 bg-amber-400/10 rounded-full blur-3xl" />
 
         {/* 1. CARD HEADER & ROULETTE + SEARCH BUTTONS */}
-        <div className="py-3 px-3 sm:p-4 bg-gradient-to-r from-[#09152B] via-[#0E2244] to-[#09152B] flex flex-col sm:flex-row items-center justify-between gap-2.5 relative z-10 shrink-0">
+        <div className="py-3 px-3 sm:p-4 bg-gradient-to-r from-[#072917] via-[#0d3f25] to-[#072917] flex flex-col sm:flex-row items-center justify-between gap-2.5 relative z-10 shrink-0">
           <div className="flex items-center space-x-2.5 w-full sm:w-auto justify-center sm:justify-start">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-cyan-400 via-blue-600 to-indigo-900 p-0.5 shadow-lg shadow-cyan-500/20 flex items-center justify-center shrink-0">
-              <div className="w-full h-full bg-[#061022] rounded-[6px] flex items-center justify-center">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br from-[#00AEEF] via-sky-500 to-blue-900 p-0.5 shadow-lg shadow-sky-500/20 flex items-center justify-center shrink-0">
+              <div className="w-full h-full bg-[#052113] rounded-[6px] flex items-center justify-center">
                 <Trophy className="w-4 h-4 sm:w-5 sm:h-5 text-amber-400" />
               </div>
             </div>
             <div>
               <div className="flex items-center space-x-2">
                 <span className="text-sm sm:text-lg font-black tracking-tight text-white uppercase italic">
-                  PROPER <span className="text-cyan-400">BARCLAYS</span>
+                  PROPER{' '}
+                  <span className="text-[#00AEEF] drop-shadow-[0_0_8px_rgba(0,174,239,0.35)]">
+                    BARCLAYS
+                  </span>
                 </span>
-                <span className="hidden sm:inline-block bg-amber-400 text-slate-950 text-[10px] font-black px-1.5 py-0.5 rounded uppercase tracking-wider">
+                <span className="hidden sm:inline-block bg-amber-400 text-emerald-950 text-[10px] font-black px-1.5 py-0.5 rounded uppercase tracking-wider">
                   1990 to 2020 Vault
                 </span>
               </div>
-              <p className="text-[10px] sm:text-[11px] text-cyan-200/80 font-medium">
+              <p className="text-[10px] sm:text-[11px] text-emerald-100/80 font-medium">
                 Zero Robotic Pep Ball • 100% Screamers, Reducers &amp; Cult Heroes
               </p>
             </div>
@@ -1210,8 +1218,8 @@ export default function App() {
               onClick={() => setShowSearchVault((prev) => !prev)}
               className={`flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 font-bold px-3 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider border transition-all cursor-pointer whitespace-nowrap ${
                 showSearchVault
-                  ? 'bg-cyan-400 text-slate-950 border-cyan-300 shadow-[0_0_12px_rgba(34,211,238,0.3)]'
-                  : 'bg-slate-900/90 hover:bg-slate-800 text-cyan-300 border-cyan-500/40'
+                  ? 'bg-white text-emerald-950 border-white shadow-[0_0_12px_rgba(255,255,255,0.35)]'
+                  : 'bg-[#052113]/90 hover:bg-[#09351f] text-white border-white/40'
               }`}
             >
               <Search className="w-3.5 h-3.5 shrink-0" />
@@ -1220,7 +1228,7 @@ export default function App() {
 
             <button
               onClick={handleRandomRoulette}
-              className="flex-[1.6] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-slate-950 font-black px-3 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_10px_rgba(251,191,36,0.25)] hover:shadow-[0_0_16px_rgba(251,191,36,0.45)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
+              className="flex-[1.6] sm:flex-initial group relative inline-flex items-center justify-center gap-1.5 bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-500 text-emerald-950 font-black px-3 py-2 rounded-lg text-[11px] sm:text-xs uppercase tracking-wider shadow-[0_0_10px_rgba(251,191,36,0.25)] hover:shadow-[0_0_16px_rgba(251,191,36,0.45)] hover:scale-[1.02] active:scale-95 transition-all cursor-pointer whitespace-nowrap"
             >
               <Shuffle className="w-3.5 h-3.5 stroke-[2.5] shrink-0 group-hover:rotate-180 transition-transform duration-300" />
               <span>Random Barclays Roulette</span>
@@ -1230,17 +1238,17 @@ export default function App() {
 
         {/* TOGGLEABLE SEARCH & FILTER VAULT PANEL */}
         {showSearchVault && (
-          <div className="p-3 sm:p-4 bg-[#08152C] relative z-10 space-y-2.5 shrink-0">
+          <div className="p-3 sm:p-4 bg-[#062616] relative z-10 space-y-2.5 shrink-0">
             <div className="flex items-center justify-between gap-2">
               <div className="flex items-center gap-1.5">
-                <Film className="w-4 h-4 text-cyan-400" />
+                <Film className="w-4 h-4 text-lime-400" />
                 <h2 className="text-xs sm:text-sm font-black uppercase tracking-wider text-white">
                   Search &amp; Filter the Vault ({filteredMoments.length} of {moments.length} Matches)
                 </h2>
               </div>
               <button
                 onClick={() => setShowSearchVault(false)}
-                className="text-slate-400 hover:text-white p-1 rounded-lg bg-slate-900/70 border border-slate-700 cursor-pointer"
+                className="text-emerald-200 hover:text-white p-1 rounded-lg bg-[#041a0f] border border-white/25 cursor-pointer"
                 title="Close Search"
               >
                 <X className="w-3.5 h-3.5" />
@@ -1250,18 +1258,18 @@ export default function App() {
             {/* Search Input, Era Dropdown & Category Dropdown */}
             <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
               <div className="md:col-span-6 relative">
-                <Search className="w-3.5 h-3.5 text-cyan-400 absolute left-3 top-1/2 -translate-y-1/2" />
+                <Search className="w-3.5 h-3.5 text-lime-400 absolute left-3 top-1/2 -translate-y-1/2" />
                 <input
                   type="text"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   placeholder="Search player (e.g. Yeboah, King), club, ball, sponsor..."
-                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl pl-9 pr-8 py-1.5 text-xs text-white placeholder-slate-400 focus:outline-none focus:border-amber-400"
+                  className="w-full bg-[#041a0f]/95 border border-white/35 rounded-xl pl-9 pr-8 py-1.5 text-xs text-white placeholder-emerald-200/50 focus:outline-none focus:border-amber-400"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery('')}
-                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-white cursor-pointer"
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-emerald-200 hover:text-white cursor-pointer"
                   >
                     <X className="w-3.5 h-3.5" />
                   </button>
@@ -1272,10 +1280,10 @@ export default function App() {
                 <select
                   value={selectedEra}
                   onChange={(e) => setSelectedEra(e.target.value)}
-                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl px-3 py-1.5 text-xs font-bold text-cyan-200 focus:outline-none focus:border-amber-400 cursor-pointer"
+                  className="w-full bg-[#041a0f]/95 border border-white/35 rounded-xl px-3 py-1.5 text-xs font-bold text-lime-300 focus:outline-none focus:border-amber-400 cursor-pointer"
                 >
                   {ERA_FILTERS.map((era) => (
-                    <option key={era} value={era} className="bg-slate-950 text-white">
+                    <option key={era} value={era} className="bg-[#041a0f] text-white">
                       {era}
                     </option>
                   ))}
@@ -1286,10 +1294,10 @@ export default function App() {
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
-                  className="w-full bg-slate-950/90 border border-cyan-500/40 rounded-xl px-3 py-1.5 text-xs font-bold text-amber-300 focus:outline-none focus:border-amber-400 cursor-pointer"
+                  className="w-full bg-[#041a0f]/95 border border-white/35 rounded-xl px-3 py-1.5 text-xs font-bold text-amber-300 focus:outline-none focus:border-amber-400 cursor-pointer"
                 >
                   {CATEGORY_TAGS.map((tag) => (
-                    <option key={tag} value={tag} className="bg-slate-950 text-white">
+                    <option key={tag} value={tag} className="bg-[#041a0f] text-white">
                       {tag}
                     </option>
                   ))}
@@ -1299,8 +1307,8 @@ export default function App() {
 
             {/* Filtered Vault Entries List */}
             {filteredMoments.length === 0 ? (
-              <div className="bg-slate-950/70 border border-slate-800 rounded-xl p-4 text-center space-y-1.5">
-                <p className="text-xs font-bold text-slate-300">
+              <div className="bg-[#041a0f]/80 border border-white/20 rounded-xl p-4 text-center space-y-1.5">
+                <p className="text-xs font-bold text-emerald-100">
                   No Barclays moments match that filter combination.
                 </p>
                 <button
@@ -1324,29 +1332,29 @@ export default function App() {
                       onClick={() => handleSelectMoment(m)}
                       className={`group rounded-xl p-2.5 transition-all cursor-pointer flex flex-col justify-between border ${
                         isCurrent
-                          ? 'bg-gradient-to-b from-[#11254A] to-[#0B1730] border-amber-400'
-                          : 'bg-slate-950/80 border-slate-800 hover:border-cyan-400/60 hover:bg-[#0D1B36]'
+                          ? 'bg-gradient-to-b from-[#0f4d2d] to-[#082e1a] border-amber-400'
+                          : 'bg-[#041a0f]/85 border-white/20 hover:border-white/60 hover:bg-[#0b3b22]'
                       }`}
                     >
                       <div>
                         <div className="flex items-center justify-between gap-2 mb-1">
-                          <span className="text-[10px] font-extrabold text-cyan-400 uppercase">
+                          <span className="text-[10px] font-extrabold text-lime-300 uppercase">
                             {m.season} • {m.category}
                           </span>
-                          <span className="bg-slate-900 border border-slate-700 px-2 py-0.5 rounded text-[10px] font-black text-amber-300">
+                          <span className="bg-[#03140b] border border-white/25 px-2 py-0.5 rounded text-[10px] font-black text-amber-300">
                             {m.homeTeam} {m.score} {m.awayTeam}
                           </span>
                         </div>
-                        <h3 className="text-xs font-black text-white group-hover:text-cyan-300 transition leading-snug">
+                        <h3 className="text-xs font-black text-white group-hover:text-lime-300 transition leading-snug">
                           {m.title}
                         </h3>
                       </div>
 
-                      <div className="flex items-center justify-between gap-2 mt-1.5 pt-1 border-t border-slate-800/80">
+                      <div className="flex items-center justify-between gap-2 mt-1.5 pt-1 border-t border-white/15">
                         <span className="text-[11px] font-bold text-amber-400 truncate">
                           {m.player} ({m.barclaysRating}% Nostalgia)
                         </span>
-                        <span className="text-[10px] font-black uppercase text-cyan-300 group-hover:translate-x-0.5 transition">
+                        <span className="text-[10px] font-black uppercase text-white group-hover:translate-x-0.5 transition">
                           Load Entry →
                         </span>
                       </div>
@@ -1359,44 +1367,44 @@ export default function App() {
         )}
 
         {/* 2. SINGLE ACTIVE VAULT ENTRY SPOTLIGHT */}
-        <div className="py-3.5 px-3 sm:p-5 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4 relative z-10 bg-[#070F20]/70">
+        <div className="py-3.5 px-3 sm:p-5 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4 relative z-10 bg-[#062415]/80">
           {/* Fixed Height Scoreboard, Era Bar, Title & Description Box */}
-          <div className="bg-gradient-to-r from-[#061229] via-[#0F295A] to-[#061229] border border-cyan-400/40 rounded-xl p-3 h-[196px] sm:h-[205px] flex flex-col justify-between overflow-hidden shrink-0">
+          <div className="bg-gradient-to-r from-[#072e1b] via-[#0e482b] to-[#072e1b] border-2 border-white/45 rounded-xl p-3 h-[196px] sm:h-[205px] flex flex-col justify-between overflow-hidden shrink-0 shadow-inner">
             {/* Row 1: Player, Season/Date & Category with equal spacing between all three and dynamic sizing */}
             <div className="flex items-center justify-between gap-1 sm:gap-3 flex-nowrap w-full shrink-0">
               <span
-                className={`bg-red-600 text-white ${getPlayerBadgeFontSize(
+                className={`bg-red-700 border border-red-500 text-white ${getPlayerBadgeFontSize(
                   activeMoment.player
-                )} font-black px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0`}
+                )} font-black px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0 shadow-sm`}
               >
                 {activeMoment.player}
               </span>
 
-              <span className="text-[clamp(7.5px,2.1vw,11px)] font-bold text-cyan-300 uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0 text-center">
+              <span className="text-[clamp(7.5px,2.1vw,11px)] font-bold text-lime-300 uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0 text-center">
                 {activeMoment.season} • {activeMoment.date}
               </span>
 
-              <span className="inline-flex items-center gap-1 bg-cyan-500/15 border border-cyan-400/40 text-cyan-300 text-[clamp(7.5px,2vw,10px)] font-extrabold px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
-                <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 shrink-0" />
+              <span className="inline-flex items-center gap-1 bg-lime-400/15 border border-lime-300/50 text-lime-200 text-[clamp(7.5px,2vw,10px)] font-extrabold px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
+                <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-amber-300 shrink-0" />
                 <span>{activeMoment.category}</span>
               </span>
             </div>
 
             {/* Row 2: Symmetrical Centered Match Scoreline */}
             <div className="flex items-center justify-center shrink-0">
-              <div className="inline-grid grid-cols-[1fr_auto_1fr] items-center bg-slate-950 border border-amber-400/50 rounded-lg overflow-hidden text-[11px] sm:text-xs font-black shadow-md">
+              <div className="inline-grid grid-cols-[1fr_auto_1fr] items-center bg-[#041a0f] border-2 border-white/75 rounded-lg overflow-hidden text-[11px] sm:text-xs font-black shadow-md">
                 <span
                   style={{ minWidth: `${teamWingMinCh}ch` }}
-                  className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase text-center whitespace-nowrap"
+                  className="px-2.5 py-1 bg-gradient-to-b from-[#0c3b22] to-[#062314] text-white uppercase text-center whitespace-nowrap"
                 >
                   {activeMoment.homeTeam}
                 </span>
-                <span className="px-2.5 py-1 bg-amber-400 text-slate-950 font-black tracking-tight text-center whitespace-nowrap">
+                <span className="px-2.5 py-1 bg-amber-400 text-emerald-950 font-black tracking-tight text-center whitespace-nowrap border-x-2 border-white/75">
                   {activeMoment.score}
                 </span>
                 <span
                   style={{ minWidth: `${teamWingMinCh}ch` }}
-                  className="px-2.5 py-1 bg-gradient-to-b from-slate-800 to-slate-900 text-white uppercase text-center whitespace-nowrap"
+                  className="px-2.5 py-1 bg-gradient-to-b from-[#0c3b22] to-[#062314] text-white uppercase text-center whitespace-nowrap"
                 >
                   {activeMoment.awayTeam}
                 </span>
@@ -1414,7 +1422,7 @@ export default function App() {
 
             {/* Row 4: Highlight Description */}
             <p
-              className={`text-slate-200 ${getDescriptionFontSize(
+              className={`text-emerald-50/95 ${getDescriptionFontSize(
                 activeMoment.description
               )} leading-snug text-center line-clamp-3 shrink-0`}
             >
@@ -1426,9 +1434,9 @@ export default function App() {
           <div className="flex-1 flex flex-col justify-between space-y-2.5 sm:space-y-3">
             {/* 4-Grid Info Metadata */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-2.5 shrink-0">
-              <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
-                  <UserCheck className="w-3 h-3 text-cyan-400" />
+              <div className="bg-[#072d1a]/90 border border-white/30 rounded-xl p-2.5">
+                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-emerald-200/80 uppercase">
+                  <UserCheck className="w-3 h-3 text-sky-400" />
                   <span>PLAYER</span>
                 </div>
                 <div className="text-[11px] sm:text-xs font-black text-white mt-1 truncate">
@@ -1436,8 +1444,8 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
+              <div className="bg-[#072d1a]/90 border border-white/30 rounded-xl p-2.5">
+                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-emerald-200/80 uppercase">
                   <CircleDot className="w-3 h-3 text-amber-400" />
                   <span>ICONIC MATCH BALL</span>
                 </div>
@@ -1446,9 +1454,9 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
-                  <Shirt className="w-3 h-3 text-cyan-400" />
+              <div className="bg-[#072d1a]/90 border border-white/30 rounded-xl p-2.5">
+                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-emerald-200/80 uppercase">
+                  <Shirt className="w-3 h-3 text-purple-400" />
                   <span>CLASSIC SHIRT SPONSOR</span>
                 </div>
                 <div className="text-[11px] sm:text-xs font-black text-white mt-1 truncate">
@@ -1456,8 +1464,8 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-2.5">
-                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-slate-400 uppercase">
+              <div className="bg-[#072d1a]/90 border border-white/30 rounded-xl p-2.5">
+                <div className="flex items-center gap-1 text-[9.5px] sm:text-[10px] font-bold text-emerald-200/80 uppercase">
                   <MapPin className="w-3 h-3 text-emerald-400" />
                   <span>STADIUM &amp; REFEREE</span>
                 </div>
@@ -1468,7 +1476,7 @@ export default function App() {
             </div>
 
             {/* Original Broadcast Transcript (Positioned directly above the Nostalgia Index) */}
-            <div className="bg-slate-950/90 border border-amber-400/50 rounded-xl px-3.5 py-2.5 h-[76px] sm:h-[80px] flex flex-col justify-center shadow-inner text-center shrink-0 overflow-hidden">
+            <div className="bg-[#041d11]/95 border border-amber-400/50 rounded-xl px-3.5 py-2.5 h-[76px] sm:h-[80px] flex flex-col justify-center shadow-inner text-center shrink-0 overflow-hidden">
               <div className="flex items-center justify-center gap-1.5 text-[9.5px] sm:text-[10px] text-amber-300 font-bold uppercase mb-1 shrink-0">
                 <Radio className="w-3 h-3 text-red-500 animate-ping" />
                 <span>ORIGINAL BROADCAST AUDIO TRANSCRIPT</span>
@@ -1479,22 +1487,22 @@ export default function App() {
             </div>
 
             {/* Proper Barclays Nostalgia Index Bar */}
-            <div className="bg-slate-950/90 border border-cyan-500/30 rounded-xl p-2.5 sm:p-3 shrink-0">
+            <div className="bg-[#041d11]/95 border border-white/35 rounded-xl p-2.5 sm:p-3 shrink-0">
               <div className="flex items-center justify-between text-[10.5px] sm:text-[11px] font-black uppercase mb-1.5">
-                <span className="text-cyan-300 tracking-wider">
+                <span className="text-white tracking-wider">
                   Proper Barclays Nostalgia Index
                 </span>
                 <span className="text-amber-400">
                   {activeMoment.barclaysRating}%
                 </span>
               </div>
-              <div className="w-full h-2.5 bg-slate-800 rounded-full overflow-hidden p-0.5">
+              <div className="w-full h-2.5 bg-[#02120a] border border-white/20 rounded-full overflow-hidden p-0.5">
                 <div
-                  className="h-full bg-gradient-to-r from-cyan-400 via-amber-400 to-red-500 rounded-full transition-all duration-500"
+                  className="h-full bg-gradient-to-r from-sky-500 via-amber-400 to-red-600 rounded-full transition-all duration-500"
                   style={{ width: `${activeMoment.barclaysRating}%` }}
                 />
               </div>
-              <div className="flex items-center justify-between text-[9.5px] sm:text-[10px] text-slate-400 font-semibold mt-1.5">
+              <div className="flex items-center justify-between text-[9.5px] sm:text-[10px] text-emerald-100/80 font-semibold mt-1.5">
                 <span>Vault Clip Views: {activeMoment.viewCount.toLocaleString()}</span>
                 <span>0 to 100% Nostalgia Scale</span>
               </div>
@@ -1506,7 +1514,7 @@ export default function App() {
                 href={`https://www.youtube.com/watch?v=${activeMoment.youtubeId}${activeMoment.startTime > 0 ? `&t=${activeMoment.startTime}s` : ''}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white font-black px-8 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider shadow-[0_0_18px_rgba(220,38,38,0.45)] hover:scale-[1.02] active:scale-95 transition"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-500 hover:from-red-500 hover:to-red-400 text-white border border-white/40 font-black px-8 py-3 rounded-xl text-xs sm:text-sm uppercase tracking-wider shadow-[0_0_18px_rgba(220,38,38,0.45)] hover:scale-[1.02] active:scale-95 transition"
               >
                 <Play className="w-4 h-4 fill-current" />
                 <span>Launch video clip</span>
