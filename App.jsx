@@ -28,11 +28,14 @@ const CATEGORY_TAGS = [
   'All Categories',
   'Proper Volley',
   'Thunderbastard',
-  'Solo Run',
-  'Free Kick',
-  'Last Minute',
-  'Proper Tackle',
-  'Iconic Moment'
+  'Solo Magic',
+  'Wonder Free Kick',
+  'Last Minute Winner',
+  'Crunching Tackle',
+  'Iconic Celebration',
+  'Touchline Chaos',
+  'Memorable Moment',
+  'Disasterclass'
 ];
 
 const INITIAL_MOMENTS = [
@@ -130,7 +133,7 @@ const INITIAL_MOMENTS = [
     season: "2001/02",
     date: "2 Mar 2002",
     era: "2000s",
-    category: "Solo Run",
+    category: "Solo Magic",
     ball: "Nike Geo Merlin",
     sponsor: "Sega / Dreamcast",
     stadium: "St James' Park",
@@ -151,7 +154,7 @@ const INITIAL_MOMENTS = [
     season: "1996/97",
     date: "21 Dec 1996",
     era: "1990s",
-    category: "Iconic Moment",
+    category: "Iconic Celebration",
     ball: "Mitre Ultimax",
     sponsor: "Sharp",
     stadium: "Old Trafford",
@@ -193,7 +196,7 @@ const INITIAL_MOMENTS = [
     season: "1993/94",
     date: "24 Oct 1993",
     era: "1990s",
-    category: "Solo Run",
+    category: "Solo Magic",
     ball: "Mitre Pro Max",
     sponsor: "Dimplex",
     stadium: "The Dell",
@@ -256,7 +259,7 @@ const INITIAL_MOMENTS = [
     season: "1996/97",
     date: "17 Aug 1996",
     era: "1990s",
-    category: "Thunderbastard",
+    category: "Memorable Moment",
     ball: "Mitre Ultimax",
     sponsor: "Sharp",
     stadium: "Selhurst Park",
@@ -298,7 +301,7 @@ const INITIAL_MOMENTS = [
     season: "2011/12",
     date: "9 Apr 2012",
     era: "2010s",
-    category: "Solo Run",
+    category: "Solo Magic",
     ball: "Nike Seitiro",
     sponsor: "Virgin Money",
     stadium: "St James' Park",
@@ -319,7 +322,7 @@ const INITIAL_MOMENTS = [
     season: "2012/13",
     date: "15 Dec 2012",
     era: "2010s",
-    category: "Solo Run",
+    category: "Solo Magic",
     ball: "Nike Maxim Hi Vis",
     sponsor: "AirAsia",
     stadium: "Loftus Road",
@@ -340,7 +343,7 @@ const INITIAL_MOMENTS = [
     season: "2002/03",
     date: "26 Apr 2003",
     era: "2000s",
-    category: "Iconic Moment",
+    category: "Solo Magic",
     ball: "Nike Geo Merlin II",
     sponsor: "Reebok",
     stadium: "Reebok Stadium",
@@ -382,7 +385,7 @@ const INITIAL_MOMENTS = [
     season: "2008/09",
     date: "1 Nov 2008",
     era: "2000s",
-    category: "Iconic Moment",
+    category: "Touchline Chaos",
     ball: "Nike Total 90 Omni Hi Vis",
     sponsor: "Britannia",
     stadium: "Britannia Stadium",
@@ -466,7 +469,7 @@ const INITIAL_MOMENTS = [
     season: "2012/13",
     date: "18 Aug 2012",
     era: "2010s",
-    category: "Iconic Moment",
+    category: "Iconic Celebration",
     ball: "Nike Maxim",
     sponsor: "32Red",
     stadium: "Loftus Road",
@@ -487,7 +490,7 @@ const INITIAL_MOMENTS = [
     season: "2006/07",
     date: "5 Nov 2006",
     era: "2000s",
-    category: "Proper Tackle",
+    category: "Crunching Tackle",
     ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "Mansion",
     stadium: "White Hart Lane",
@@ -550,7 +553,7 @@ const INITIAL_MOMENTS = [
     season: "2007/08",
     date: "30 Jan 2008",
     era: "2000s",
-    category: "Free Kick",
+    category: "Wonder Free Kick",
     ball: "Nike Total 90 Aerow II Hi Vis",
     sponsor: "AIG",
     stadium: "Old Trafford",
@@ -571,7 +574,7 @@ const INITIAL_MOMENTS = [
     season: "2002/03",
     date: "19 Oct 2002",
     era: "2000s",
-    category: "Last Minute",
+    category: "Last Minute Winner",
     ball: "Nike Geo Merlin II",
     sponsor: "Kejian",
     stadium: "Goodison Park",
@@ -592,7 +595,7 @@ const INITIAL_MOMENTS = [
     season: "2002/03",
     date: "16 Nov 2002",
     era: "2000s",
-    category: "Solo Run",
+    category: "Iconic Celebration",
     ball: "Nike Geo Merlin II",
     sponsor: "O2",
     stadium: "Highbury",
@@ -613,7 +616,7 @@ const INITIAL_MOMENTS = [
     season: "2003/04",
     date: "9 Apr 2004",
     era: "2000s",
-    category: "Solo Run",
+    category: "Solo Magic",
     ball: "Nike Geo Merlin",
     sponsor: "O2",
     stadium: "Highbury",
@@ -634,7 +637,7 @@ const INITIAL_MOMENTS = [
     season: "1998/99",
     date: "26 Sep 1998",
     era: "1990s",
-    category: "Iconic Moment",
+    category: "Touchline Chaos",
     ball: "Mitre Ultimax",
     sponsor: "Sanderson",
     stadium: "Hillsborough",
@@ -655,7 +658,7 @@ const INITIAL_MOMENTS = [
     season: "2004/05",
     date: "1 Feb 2005",
     era: "2000s",
-    category: "Proper Tackle",
+    category: "Crunching Tackle",
     ball: "Nike Total 90 Aerow Hi Vis",
     sponsor: "O2 / Vodafone",
     stadium: "Highbury",
@@ -676,7 +679,7 @@ const INITIAL_MOMENTS = [
     season: "2010/11",
     date: "5 Feb 2011",
     era: "2010s",
-    category: "Last Minute",
+    category: "Last Minute Winner",
     ball: "Nike Total 90 Tracer Hi Vis",
     sponsor: "Northern Rock",
     stadium: "St James' Park",
@@ -697,7 +700,7 @@ const INITIAL_MOMENTS = [
     season: "2015/16",
     date: "2 Apr 2016",
     era: "2010s",
-    category: "Free Kick",
+    category: "Wonder Free Kick",
     ball: "Nike Ordem 3",
     sponsor: "Betway",
     stadium: "Upton Park",
@@ -718,7 +721,7 @@ const INITIAL_MOMENTS = [
     season: "2001/02",
     date: "8 May 2002",
     era: "2000s",
-    category: "Proper Tackle",
+    category: "Crunching Tackle",
     ball: "Nike Geo Merlin",
     sponsor: "Sega / Dreamcast",
     stadium: "Old Trafford",
@@ -781,7 +784,7 @@ const INITIAL_MOMENTS = [
     season: "2001/02",
     date: "4 Nov 2001",
     era: "2000s",
-    category: "Free Kick",
+    category: "Wonder Free Kick",
     ball: "Nike Geo Merlin",
     sponsor: "Carlsberg",
     stadium: "Anfield",
@@ -844,7 +847,7 @@ const INITIAL_MOMENTS = [
     season: "2013/14",
     date: "11 Jan 2014",
     era: "2010s",
-    category: "Proper Tackle",
+    category: "Crunching Tackle",
     ball: "Nike Incyte Hi Vis",
     sponsor: "Aon",
     stadium: "Old Trafford",
@@ -886,7 +889,7 @@ const INITIAL_MOMENTS = [
     season: "2009/10",
     date: "12 Dec 2009",
     era: "2000s",
-    category: "Free Kick",
+    category: "Wonder Free Kick",
     ball: "Nike Total 90 Ascente Hi Vis",
     sponsor: "188BET",
     stadium: "Britannia Stadium",
@@ -949,7 +952,7 @@ const INITIAL_MOMENTS = [
     season: "2007/08",
     date: "29 Sep 2007",
     era: "2000s",
-    category: "Iconic Moment",
+    category: "Memorable Moment",
     ball: "Nike Total 90 Aerow II",
     sponsor: "OKI / Kyocera",
     stadium: "Fratton Park",
@@ -970,7 +973,7 @@ const INITIAL_MOMENTS = [
     season: "1997/98",
     date: "17 Jan 1998",
     era: "1990s",
-    category: "Last Minute",
+    category: "Touchline Chaos",
     ball: "Mitre Ultimax",
     sponsor: "Newcastle Brown Ale",
     stadium: "St James' Park",
@@ -991,7 +994,7 @@ const INITIAL_MOMENTS = [
     season: "2009/10",
     date: "28 Nov 2009",
     era: "2000s",
-    category: "Iconic Moment",
+    category: "Iconic Celebration",
     ball: "Nike Total 90 Ascente Hi Vis",
     sponsor: "Totesport.com",
     stadium: "Etihad Stadium",
@@ -1012,7 +1015,7 @@ const INITIAL_MOMENTS = [
     season: "2011/12",
     date: "13 May 2012",
     era: "2010s",
-    category: "Last Minute",
+    category: "Last Minute Winner",
     ball: "Nike Seitiro",
     sponsor: "Etihad Airways",
     stadium: "Etihad Stadium",
@@ -1033,7 +1036,7 @@ const INITIAL_MOMENTS = [
     season: "2013/14",
     date: "4 Dec 2013",
     era: "2010s",
-    category: "Thunderbastard",
+    category: "Memorable Moment",
     ball: "Nike Incyte Hi Vis",
     sponsor: "Standard Chartered",
     stadium: "Anfield",
@@ -1054,7 +1057,7 @@ const INITIAL_MOMENTS = [
     season: "2004/05",
     date: "4 Jan 2005",
     era: "2000s",
-    category: "Iconic Moment",
+    category: "Disasterclass",
     ball: "Nike Total 90 Aerow Hi Vis",
     sponsor: "Thomson / Vodafone",
     stadium: "Old Trafford",
@@ -1075,7 +1078,7 @@ const INITIAL_MOMENTS = [
     season: "2010/11",
     date: "13 Nov 2010",
     era: "2010s",
-    category: "Solo Run",
+    category: "Solo Magic",
     ball: "Nike Total 90 Tracer Hi Vis",
     sponsor: "188BET",
     stadium: "Molineux",
@@ -1146,13 +1149,20 @@ export default function App() {
     setActiveMoment(randomPick);
   };
 
-  // Dynamic font size helper so the player name never gets cut off or truncated
+  // Dynamic font size helpers so the player name and category fit cleanly in their equal wings on either side of the centered season/date
   const getPlayerBadgeFontSize = (name) => {
     const len = name.length;
-    if (len > 22) return 'text-[clamp(6.5px,1.75vw,10px)]';
-    if (len > 17) return 'text-[clamp(7px,1.95vw,10.5px)]';
-    if (len > 13) return 'text-[clamp(7.5px,2.15vw,11px)]';
-    return 'text-[clamp(8.5px,2.35vw,11px)]';
+    if (len > 22) return 'text-[clamp(6px,1.55vw,9.5px)]';
+    if (len > 17) return 'text-[clamp(6.5px,1.75vw,10px)]';
+    if (len > 13) return 'text-[clamp(7.5px,2vw,10.5px)]';
+    return 'text-[clamp(8px,2.2vw,11px)]';
+  };
+
+  const getCategoryBadgeFontSize = (category) => {
+    const len = category.length;
+    if (len > 16) return 'text-[clamp(6.5px,1.65vw,9.5px)]';
+    if (len > 13) return 'text-[clamp(7px,1.85vw,10px)]';
+    return 'text-[clamp(7.5px,2vw,10.5px)]';
   };
 
   // Dynamic font size helpers for title and description inside fixed height scoreboard box
@@ -1314,8 +1324,8 @@ export default function App() {
                 <button
                   onClick={() => {
                     setSearchQuery('');
-                    setSelectedEra('All Eras (1990 to 2020)');
-                    setSelectedCategory('All Moments');
+                    setSelectedEra('All Eras');
+                    setSelectedCategory('All Categories');
                   }}
                   className="text-[11px] font-black uppercase text-amber-400 hover:underline cursor-pointer"
                 >
@@ -1370,24 +1380,32 @@ export default function App() {
         <div className="py-3.5 px-3 sm:p-5 flex-1 flex flex-col justify-between space-y-3 sm:space-y-4 relative z-10 bg-[#062415]/80">
           {/* Fixed Height Scoreboard, Era Bar, Title & Description Box */}
           <div className="bg-gradient-to-r from-[#072e1b] via-[#0e482b] to-[#072e1b] border-2 border-white/45 rounded-xl p-3 h-[196px] sm:h-[205px] flex flex-col justify-between overflow-hidden shrink-0 shadow-inner">
-            {/* Row 1: Player, Season/Date & Category with equal spacing between all three and dynamic sizing */}
-            <div className="flex items-center justify-between gap-1 sm:gap-3 flex-nowrap w-full shrink-0">
-              <span
-                className={`bg-red-700 border border-red-500 text-white ${getPlayerBadgeFontSize(
-                  activeMoment.player
-                )} font-black px-1.5 sm:px-2 py-0.5 rounded uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0 shadow-sm`}
-              >
-                {activeMoment.player}
-              </span>
+            {/* Row 1: Fixed Center Season/Date with Symmetrical Player & Category Wings and Equal Gaps */}
+            <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-1.5 sm:gap-3 w-full shrink-0">
+              <div className="w-full min-w-0 flex items-center justify-center">
+                <span
+                  className={`w-full text-center bg-red-700 border border-red-500 text-white ${getPlayerBadgeFontSize(
+                    activeMoment.player
+                  )} font-black px-1 sm:px-2 py-0.5 rounded uppercase tracking-tight sm:tracking-wider whitespace-nowrap shadow-sm`}
+                >
+                  {activeMoment.player}
+                </span>
+              </div>
 
-              <span className="text-[clamp(7.5px,2.1vw,11px)] font-bold text-lime-300 uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0 text-center">
+              <span className="text-[clamp(7.5px,2.05vw,11px)] font-bold text-lime-300 uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0 text-center px-0.5">
                 {activeMoment.season} • {activeMoment.date}
               </span>
 
-              <span className="inline-flex items-center gap-1 bg-lime-400/15 border border-lime-300/50 text-lime-200 text-[clamp(7.5px,2vw,10px)] font-extrabold px-1.5 sm:px-2 py-0.5 rounded-full uppercase tracking-tight sm:tracking-wider whitespace-nowrap shrink-0">
-                <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-amber-300 shrink-0" />
-                <span>{activeMoment.category}</span>
-              </span>
+              <div className="w-full min-w-0 flex items-center justify-center">
+                <span
+                  className={`w-full inline-flex items-center justify-center gap-1 bg-lime-400/15 border border-lime-300/50 text-lime-200 ${getCategoryBadgeFontSize(
+                    activeMoment.category
+                  )} font-extrabold px-1 sm:px-2 py-0.5 rounded-full uppercase tracking-tight sm:tracking-wider whitespace-nowrap`}
+                >
+                  <Sparkles className="w-2.5 h-2.5 sm:w-3 sm:h-3 text-amber-300 shrink-0" />
+                  <span>{activeMoment.category}</span>
+                </span>
+              </div>
             </div>
 
             {/* Row 2: Symmetrical Centered Match Scoreline */}
